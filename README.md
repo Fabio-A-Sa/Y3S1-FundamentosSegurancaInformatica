@@ -7,7 +7,7 @@ This repository contains all the exercises and assessments of the UC Fundamentos
   <img 
        title = "FEUP logo"
        src = "Images//FEUP_Logo.png" 
-       alt = "FEUP Logo" 
+       alt = "FEUP Logo"  
        />
 </p>
 
