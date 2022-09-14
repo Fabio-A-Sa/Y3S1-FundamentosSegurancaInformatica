@@ -1,8 +1,8 @@
 # 1 - Introdução à Segurança Informática
 
-## Motivação
+## 1.1 - Motivação
 
-Não há software seguro, pois existem sempre inúmeros erros/bugs não previstos pelos desenvolvedores. Existem *exploits* (portas de entrada), *malwares*, fazendo a exploração destas vulnerabilidades uma atividade lucrativa. <br>
+A definição de segurança depende do contexto informático em que está inserida. Não há software seguro, pois existem sempre inúmeros erros/bugs não previstos pelos desenvolvedores. Existem *exploits* (portas de entrada), *malwares*, fazendo a exploração destas vulnerabilidades uma atividade lucrativa. <br>
 Os atacantes podem ter as seguintes motivações:
 
 1. Comprometer as credenciais dos utilizadores, como contas bancárias, de jogos ou empresariais. Exemplo: Trojan;
@@ -11,12 +11,10 @@ Os atacantes podem ter as seguintes motivações:
 4. Usurpar o endereço legítimo de redes (conjunto de computadores) para lançar SPAM, Denial of Service e Clicks;
 5. Ao atacar servidores, há acesso a muitos dados, com perda de confiança, dados médicos, motivações políticas, dados bancários, endereços;
 
-#### BugBounties
+#### 1.1.1 - BugBounties
 
 Forma de motivar o Hacker para que este tenha uma recompensa monetária após encontrar e reportar sigilosamente uma vulnerabilidade em vez de comprometer o sistema ou prejudicar a empresa.
 
-## Segurança
+## 1.2 - Elementos na Segurança da Informação
 
-A definição depende do contexto informático em que está inserida. 
-
-
+### 1.2.1 - Atores
