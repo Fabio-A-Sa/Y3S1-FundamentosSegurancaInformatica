@@ -18,3 +18,9 @@ Forma de motivar o Hacker para que este tenha uma recompensa monetária após en
 ## 1.2 - Elementos na Segurança da Informação
 
 ### 1.2.1 - Atores
+
+Entidades que intervêm no sistema, como pessoas, organizações, empresas e máquinas. A segurança define-se do ponto de vista destes atores. 
+
+### 1.2.2 - Atacantes
+
+São na sua maioria atores externos. Podem ser *script-kiddies* (apenas curiosos a experimentar software), ocasionais (que tentam compreender o funcionamento do sistema em causa), pessoas com intenção de causar danos, grupos organizados e tecnicamente sofisticados que constituem ciber crime, competidores de espionagem industrial e até os próprios países, estados ou governos. 
