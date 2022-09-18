@@ -51,12 +51,12 @@ Falha que está acessível a um adversário que pode ter a capacidade de a explo
 
 ## 2.3 - Ataques
 
-Ocorre quando alguém tenta explorar uma vulnerabilidade. Existem ataques ativos (), passivos () e DDos. <br>
-Estrutura de um ataque:
+Ocorre quando alguém tenta explorar uma vulnerabilidade. Existem ataques ativos (adivinhar passwords), passivos (eavesdropping) e Denial of Service. Quando um ataque é bem sucedido, diz-se que o sistema foi comprometido. <br>
+Estrutura de um ataque (MOM):
 
-1. Motivo
-2. Oportunidade
-3. Método
+1. Motivo/Ameaça;
+2. Oportunidade/Vulnerabilidade;
+3. Método/Exploit;
 
 ## 2.4 - Ameaça
 
