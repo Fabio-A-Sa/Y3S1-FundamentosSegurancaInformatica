@@ -42,7 +42,12 @@ Existem dois eixos: os ativos (recurso que detém valor para um ator do sistema,
 
 ## 2.2 - Vulnerabilidade
 
-Falha que está acessível a um adversário que pode ter a capacidade de a explorar. +Exemplos
+Falha que está acessível a um adversário que pode ter a capacidade de a explorar. Tem geralmente origem em erros de concepção:
+
+- Software de má qualidade;
+- Análise de requisitos desadequada;
+- Configurações erradas;
+- Utilização errada;
 
 ## 2.3 - Ataques
 
