@@ -29,11 +29,16 @@ Característico da engenharia de software e segurança no mundo real. Minimiza o
 
 - Pode haver incorreção na análise do risco;
 - Mesmo com este modelo, não há segurança total;
+- Uma ameaça mal classificada pode deitar tudo por terra;
 
 #### Matriz de análise de risco
 
-Existem dois eixos: ativos (#TODO) e ameaças.  
-#TODO
+Existem dois eixos: os ativos (recurso que detém valor para um ator do sistema, como informação, reputação/imagem, dinheiro/recurso, infra-estrutura) e as ameaças. 
+
+<p align="center">
+    <img src="../Images/Matriz.png">
+    <p align="center">Figura 1: Matriz de risco</p>
+</p>
 
 ## 2.2 - Vulnerabilidade
 
@@ -51,3 +56,4 @@ Estrutura de um ataque:
 ## 2.4 - Ameaça
 
 Causa 
+
