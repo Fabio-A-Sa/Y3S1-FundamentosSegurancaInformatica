@@ -23,8 +23,7 @@ Característico das criptografias. Há caracterização formal do atacante e dos
 
 ### 2.1.2 - Gestão de Risco
 
-Característico da engenharia de software e segurança no mundo real. Minimiza os riscos de ataques em função 
-#TODO
+Característico da engenharia de software e segurança no mundo real. Minimiza os riscos de ataques em função das ameaças mais prováveis. Equilibra o possível custo com as potenciais perdas. É necessário ter resiliência, mitigar os problemas e ter sempre em conta o risco.
 
 #### Desvantagens
 
