@@ -51,4 +51,4 @@ Estrutura de um ataque:
 
 ## 2.4 - Ameaça
 
-
+Causa 
