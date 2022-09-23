@@ -3,14 +3,13 @@
 ## Identificação
 
 A vulnerabilidade [CVE-2019-3810](https://www.exploit-db.com/exploits/49814) foi explorada através de um servidor PHP que dava suporte ao Moodle na versão 3.6.1. <br>
-Através de XSS (injeção de um script persistente e malicioso no servidor),  
-
-
-XSS: Quando scripts maliciosos são injectados. Podem ser persistentes, quando são storage na base de dados ou servidor, e reflected, quando não são permanentes, ou DOM Based, quando o script malicioso não deixa o browser (injectado pelo URL por exemplo).
+Através de XSS (injeção de um script persistente e malicioso na base de dados do servidor), há modificação de privilégios, onde o utilizador consegue passar de estudante para administra
+dor dentro do sistema. 
 
 ## Catalogação
 
-o que se sabe sobre o seu reporting, quem, quando, como, bug-bounty, nível de gravidade, etc. (max 4 itens com 20 palavras cada)
+Foi catalogada em abril de 2021 por "farisv". 
+explicar como funciona
 
 ## Exploit
 
@@ -27,5 +26,6 @@ descrever que tipo de exploit é conhecido e que tipo de automação existe, e.g
 
 ### Grupo L05G05
 
+- Alexandre Guimarães Gomes Correia (up202007042@fe.up.pt);
 - Fábio Araújo de Sá (up202007658@fe.up.pt);
 - Lourenço Alexandre Correia Gonçalves (up202004816@fe.up.pt);
