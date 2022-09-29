@@ -94,3 +94,7 @@ As novas vulnerabilidades aparecem todos os dias e há um esforço mundial para 
 
 Vulnerabilidade/Exploit que só um grupo muito restrito de pessoas sabem que existe. É usada como arma e o negócio pode chegar a milhares de dólares. 
 
+## 2.4 - Mecanismo de Segurança
+
+Após determinar o perímetro de segurança (tudo que está dentro do perímetro do sistema é seguro, tudo que está fora é potencialmente perigoso) e definir a superfície de ataque (pontos e formas de contacto com o exterior, ou seja, por onde a informação sai), é importante definir o mecanismo de segurança.
+
