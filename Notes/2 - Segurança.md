@@ -70,4 +70,12 @@ Meio de fazer um ataque, materialização da perda de valor.
 
 ## 2.3 - Reporting
 
+As novas vulnerabilidades aparecem todos os dias e há um esforço mundial para catalogar, identificar, divulgar e detectar as mesmas. Motivos:
+
+- Quando uma vulnerabilidade está bem documentada, há garantia nos sistemas que a conhecem que não há exposição a ameaças;
+- Capacidade de generalizar vulnerabilidades para obter robustez para aquela gama de ataques;
+
+### 2.3.1 Zero-Day Vulnerability
+
+Vulnerabilidade/Exploit que só um grupo muito restrito de pessoas sabem que existe. É usada como arma e o negócio pode chegar a milhares de dólares. 
 
