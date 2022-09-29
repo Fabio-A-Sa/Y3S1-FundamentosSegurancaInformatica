@@ -1,2 +1,0 @@
-# Segurança de Software
-
