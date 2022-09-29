@@ -96,5 +96,11 @@ Vulnerabilidade/Exploit que só um grupo muito restrito de pessoas sabem que exi
 
 ## 2.4 - Mecanismo de Segurança
 
-Após determinar o perímetro de segurança (tudo que está dentro do perímetro do sistema é seguro, tudo que está fora é potencialmente perigoso) e definir a superfície de ataque (pontos e formas de contacto com o exterior, ou seja, por onde a informação sai), é importante definir o mecanismo de segurança.
+Após determinar o perímetro de segurança (tudo que está dentro do perímetro do sistema é seguro, tudo que está fora é potencialmente perigoso) e definir a superfície de ataque (pontos e formas de contacto com o exterior, ou seja, por onde a informação sai), é importante definir o mecanismo de segurança. Exemplos:
+
+- Mecanismos de identificação (biometria, one-time password);
+- Mecanismos de controlo de acesso (RBAC);
+- Criptografia (cifras, MACs, assinaturas);
+- Controlos físicos (cofres, torniquetes);
+- Auditorias (penetration testing);
 
