@@ -104,3 +104,6 @@ Após determinar o perímetro de segurança (tudo que está dentro do perímetro
 - Controlos físicos (cofres, torniquetes);
 - Auditorias (penetration testing);
 
+## 2.5 - Política de Segurança
+
+Conjunto de mecanismos que devem ser seguidos para garantir segurança num determinado modelo de ameaças, em modo prevenção, recuperação e detecção. São exemplos a segurança física, controlo de acessos, política de passwords, política de emails, política de acesso remoto.
