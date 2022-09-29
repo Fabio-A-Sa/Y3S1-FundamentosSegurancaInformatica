@@ -60,5 +60,11 @@ Estrutura de um ataque (MOM):
 
 ## 2.4 - Ameaça
 
-Causa 
+A fonte da motivação para causar perda de valor. Exemplo: perturbar o normal funcionamento do sistema, negligência, acidente natural. Algo que está na origem da potencial perda do valor.
+
+## 2.5 - Exploit
+
+Meio de fazer um ataque, materialização da perda de valor.
+
+
 
