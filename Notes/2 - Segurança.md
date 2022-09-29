@@ -62,7 +62,22 @@ Estrutura de um ataque (MOM):
 
 ### 2.2.3 - Ameaça
 
-A fonte da motivação para causar perda de valor. Exemplo: perturbar o normal funcionamento do sistema, negligência, acidente natural. Algo que está na origem da potencial perda do valor.
+A fonte da motivação para causar perda de valor. Exemplo: perturbar o normal funcionamento do sistema, negligência, acidente natural. Algo que está na origem da potencial perda do valor. Caracterização:
+
+#### Tipo de ataque
+
+- Dano físico;
+- Perda de sistemas;
+- Quebra de proteções de informação;
+- Falhas técnicas;
+- Abuso de funcionalidades;
+
+#### Tipos de atacante
+
+- Ação deliberada;
+- Ação negligente;
+- Acidente;
+- Evento ambiental;
 
 ### 2.2.4 - Exploit
 
