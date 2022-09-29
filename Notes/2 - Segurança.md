@@ -40,7 +40,9 @@ Existem dois eixos: os ativos (recurso que detém valor para um ator do sistema,
     <p align="center">Figura 1: Matriz de risco</p>
 </p>
 
-## 2.2 - Vulnerabilidade
+## 2.2 - Algumas terminologias
+
+### 2.2.1 - Vulnerabilidade
 
 Falha que está acessível a um adversário que pode ter a capacidade de a explorar. Tem geralmente origem em erros de concepção:
 
@@ -49,7 +51,7 @@ Falha que está acessível a um adversário que pode ter a capacidade de a explo
 - Configurações erradas;
 - Utilização errada;
 
-## 2.3 - Ataques
+### 2.2.2 - Ataques
 
 Ocorre quando alguém tenta explorar uma vulnerabilidade. Existem ataques ativos (adivinhar passwords), passivos (eavesdropping) e Denial of Service. Quando um ataque é bem sucedido, diz-se que o sistema foi comprometido. <br>
 Estrutura de um ataque (MOM):
@@ -58,13 +60,14 @@ Estrutura de um ataque (MOM):
 2. Oportunidade/Vulnerabilidade;
 3. Método/Exploit;
 
-## 2.4 - Ameaça
+### 2.2.3 - Ameaça
 
 A fonte da motivação para causar perda de valor. Exemplo: perturbar o normal funcionamento do sistema, negligência, acidente natural. Algo que está na origem da potencial perda do valor.
 
-## 2.5 - Exploit
+### 2.2.4 - Exploit
 
 Meio de fazer um ataque, materialização da perda de valor.
 
+## 2.3 - Reporting
 
 
