@@ -7,6 +7,12 @@ No entanto isto não é o suficiente. A segurança é um processo contínuo, ond
 2. **Integridade** - não alteração de dados, dados fidedignos e autênticos;
 3. **Disponibilidade** - existência, constância;
 
+Para avaliar a segurança de um sistema:
+
+- Definir o problema;
+- Definir o modelo de confiança;
+- Definir a solução;
+
 ## 2.1 - Modelos de Segurança
 
 ### 2.1.1 - Binário
@@ -106,4 +112,5 @@ Após determinar o perímetro de segurança (tudo que está dentro do perímetro
 
 ## 2.5 - Política de Segurança
 
-Conjunto de mecanismos que devem ser seguidos para garantir segurança num determinado modelo de ameaças, em modo prevenção, recuperação e detecção. São exemplos a segurança física, controlo de acessos, política de passwords, política de emails, política de acesso remoto.
+Conjunto de mecanismos que devem ser seguidos para garantir segurança num determinado modelo de ameaças, em modo prevenção, recuperação e detecção. <br>
+São exemplos a segurança física, controlo de acessos, política de passwords, política de emails, política de acesso remoto.
