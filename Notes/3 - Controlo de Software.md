@@ -6,10 +6,10 @@ O software pode ser manipulado para causar dano nos sistemas. É importante estu
 
 Do endereço menor para o endereço maior temos:
 
-- Text, onde tem o código a executar;
-- Data, onde teo os dados globais e estáticos;
-- Heap, armazena a memória dinamicamente;
-- Stack, armazena a informação como endereços de retorno, variáveis locais e argumentos para as funções;
+- **Text**, onde tem o código a executar;
+- **Data**, onde teo os dados globais e estáticos;
+- **Heap**, armazena a memória dinamicamente;
+- **Stack**, armazena a informação como endereços de retorno, variáveis locais e argumentos para as funções;
 
 <p align="center">
     <img src="../Images/Memory.png">
@@ -18,4 +18,8 @@ Do endereço menor para o endereço maior temos:
 
 ### 3.1.1 - Funcionamento da Stack
 
-A stack cresce de cima para baixo, com a função main() no topo. Cada chamada a funções regista na stack o endereço de retorno, as variáveis locais e os parâmetros da função a chamar. 
+A stack cresce de cima para baixo, com a função main() no topo. Cada chamada a funções regista na stack o endereço de retorno, as variáveis locais e os parâmetros da função a chamar. A frame é delimitada pelo frame pointer da função anterior e o stack pointer. Antes do stack pointer existe o return address. 
+
+### 3.1.2 - Stack Smashing
+
+Há funções como o **strcmp** que copia uma string para um apontador de variável local até ocorrer um `\0`. Ou seja, poderá corromper o frame pointer anterior e o endereço de retorno. Erros deste tipo normalmente resultam em segmentation fault, quando um processo está a escrever fora da sua zona de memória. No entanto, o endereço de retorno pode ser manipulado para apontar para um código do atacante. 
