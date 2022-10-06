@@ -22,4 +22,12 @@ A stack cresce de cima para baixo, com a função main() no topo. Cada chamada a
 
 ### 3.1.2 - Stack Smashing
 
-Há funções como o **strcmp** que copia uma string para um apontador de variável local até ocorrer um `\0`. Ou seja, poderá corromper o frame pointer anterior e o endereço de retorno. Erros deste tipo normalmente resultam em segmentation fault, quando um processo está a escrever fora da sua zona de memória. No entanto, o endereço de retorno pode ser manipulado para apontar para um código do atacante (por exemplo, um código bash).
+Há funções como o **strcmp** que copia uma string para um apontador de variável local até ocorrer um `\0`. Ou seja, poderá corromper o frame pointer anterior e o endereço de retorno. Erros deste tipo normalmente resultam em segmentation fault, quando um processo está a escrever fora da sua zona de memória. No entanto, o endereço de retorno pode ser manipulado para apontar para um código do atacante (por exemplo, um código bash "shell code").
+
+#### Shell Code
+
+- Codificado em código máquina;
+- Sequência de instruções que executam instruções shell;
+- Precedido por instruções NOP porque o seu endereço pode variar e assim há mais probabilidades de acertar;
+- Um problema é não conter \0 no código, pois o strcmp pára assim que encontrar este caracter e pode estragar o código injectado;
+
