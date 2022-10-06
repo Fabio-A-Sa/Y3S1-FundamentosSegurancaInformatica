@@ -31,3 +31,6 @@ Ataque documentado desde 1972. Há funções como o **strcmp** que copia uma str
 - Precedido por instruções NOP porque o seu endereço pode variar e assim há mais probabilidades de acertar;
 - Um problema é não conter \0 no código, pois o strcmp pára assim que encontrar este caracter e pode estragar o código injectado;
 
+### 3.1.3 - Off-by-one
+
+Um byte é escrito fora da variável local, logo permite escrever o byte menos significativo do frame pointer anterior.
