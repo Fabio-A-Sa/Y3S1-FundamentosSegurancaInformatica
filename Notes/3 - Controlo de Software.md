@@ -50,6 +50,14 @@ Apesar de ser muito mais complexo definir apontadores na heap, já que é gerida
 
 Os browsers correm código do servidor (possivelmente malicioso) no lado do utilizador. O código poderá alocar dinamicamente o máximo de scripts maliciosos com nops para ter mais probabilidade de ser executado.
 
-### 3.3.2 - User After Free
+### 3.3.2 - Use After Free
 
 Em linguagens de baixo nível como C/C++, um código malicioso pode ser alocado e, mesmo depois de um free(), poder ser executado com endereços escolhidos pelo atacante. O código pode chamar um método de uma instância destruída sem ocorrer um erro no sistema.
+
+## 3.4 - Overflows de Inteiros
+
+A truncatura por passagem para tipo mais pequeno ou uma adição/multiplicação poderá provocar uma troca de sinal (o inteiro passa de positivo para negativo). Assim há erro no tamanho das estruturas a alocar, o que pode provocar erros ou buffer overflow. 
+
+## 3.5 - Strings de Formatação
+
+Por exemplo na função printf(). 
