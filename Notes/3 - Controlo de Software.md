@@ -20,7 +20,7 @@ Do endereço menor para o endereço maior temos:
 
 A stack cresce de cima para baixo, com a função main() no topo. Cada chamada a funções regista na stack o endereço de retorno, as variáveis locais e os parâmetros da função a chamar. A frame é delimitada pelo frame pointer da função anterior e o stack pointer. Antes do stack pointer existe o return address. 
 
-## 3.2 - Stack Smashing
+## 3.2 - Stack Smashing / Buffer overflow na stack
 
 Ataque documentado desde 1972. Há funções como o **strcmp** que copia uma string para um apontador de variável local até ocorrer um `\0`. Ou seja, poderá corromper o frame pointer anterior e o endereço de retorno. Erros deste tipo normalmente resultam em segmentation fault, quando um processo está a escrever fora da sua zona de memória. No entanto, o endereço de retorno pode ser manipulado para apontar para um código do atacante (por exemplo, um código bash "shell code").
 
@@ -37,5 +37,9 @@ Um byte é escrito fora da variável local, logo permite escrever o byte menos s
 
 ## 3.3 - Overflows na Heap
 
+Pode também haver endereços alocados na Heap, através de:
+- virtual functions (há uma tabela de apontadores na Heap)
+- programa que depende de bibliotecas do sistema. Em runtime essas dependências são carregadas para a memória e para isso é necessário existir endereços;
+- tratamento das excepções;
 
 
