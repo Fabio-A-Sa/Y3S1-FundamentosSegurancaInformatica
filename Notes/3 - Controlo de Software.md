@@ -42,4 +42,14 @@ Pode também haver endereços alocados na Heap, através de:
 - programa que depende de bibliotecas do sistema. Em runtime essas dependências são carregadas para a memória e para isso é necessário existir endereços;
 - tratamento das excepções;
 
+O armazenamento das estruturas da heap são maioritariamente efetuadas por listas ligadas. São exemplos as operações malloc/free. Assim, basta tentar exceder a capacidade de escrita de uma unidade para tentar reescrever para onde aponta.
 
+Apesar de ser muito mais complexo definir apontadores na heap, já que é gerida dinamicamente ao contrário da stack, o exploit pode ser conseguido.
+
+### 3.3.1 - Heap Spraying
+
+Os browsers correm código do servidor (possivelmente malicioso) no lado do utilizador. O código poderá alocar dinamicamente o máximo de scripts maliciosos com nops para ter mais probabilidade de ser executado.
+
+### 3.3.2 - User After Free
+
+Em linguagens de baixo nível como C++, 
