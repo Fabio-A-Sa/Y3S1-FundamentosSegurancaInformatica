@@ -52,4 +52,4 @@ Os browsers correm código do servidor (possivelmente malicioso) no lado do util
 
 ### 3.3.2 - User After Free
 
-Em linguagens de baixo nível como C++, 
+Em linguagens de baixo nível como C/C++, um código malicioso pode ser alocado e, mesmo depois de um free(), poder ser executado com endereços escolhidos pelo atacante. O código pode chamar um método de uma instância destruída sem ocorrer um erro no sistema.
