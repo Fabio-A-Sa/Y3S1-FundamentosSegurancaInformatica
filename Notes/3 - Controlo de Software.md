@@ -60,4 +60,11 @@ A truncatura por passagem para tipo mais pequeno ou uma adição/multiplicação
 
 ## 3.5 - Strings de Formatação
 
-Por exemplo na função printf(). 
+Por exemplo na função printf(). Os parâmetros (um por cada %), são alocados na stack por ordem decrescente de utilização. No entanto, se houver argumentos a mais, acaba por imprimir dados sensíveis, como algo apontado por endereços na stack. 
+
+```c
+printf("<endereço>%d%d%d%d%d%s)
+```
+
+O código anterior permite ler o conteúdo da zona de memória apontada por um endereço arbitrário, já que a própria string de formatação está na stack. <br>
+Existe também uma hipótese de formatação com a `sprintf()` e o radical `%n`, que escreve numa zona arbitrária de memória a quantidade, num inteiro, de bytes que já escreveu. Assim é possível escrever endereços completos por parte do atacante. 
