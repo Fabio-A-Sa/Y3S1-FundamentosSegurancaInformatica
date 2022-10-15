@@ -115,3 +115,9 @@ Previnem injeção de código detectando modificações à stack. Ao introduzir 
 - Antes da função retornar (ou seja, antes de haver verificação do canário), chamar uma função que pode executar código malicioso;
 - Brute force, tentando todas as combinações de bytes ou construindo a solução byte a byte;
 
+### Mitigações adicionais
+
+- Garantir que os buffers estão sempre juntos ao canário;
+- Copiar os argumentos da função para o topo da stack (abaixo dos buffers locais);
+- Usar uma shadow stack, que é redundante e serve apenas para controlo (endereços frame e de retorno, dados sensíveis), em que antes de qualquer função retornar há verificação da consistência;
+
