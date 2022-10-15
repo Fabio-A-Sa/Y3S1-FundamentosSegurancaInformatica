@@ -28,3 +28,5 @@ Cada recurso contém uma lista de permissões dos actores sobre esse próprio. P
 
 ### 4.2.3 - Listas de permissões (Capabilities)
 
+Para cada ator, as operações que pode realizar sobre cada recurso. Por um lado faz-nos lidar com cada ator individualmente (armazenamento associado ao ator) e garante que um ator pode aceder a um número limitado de recursos. Por outro lado não é possível determinar todos os atores que podem manipular determinado recurso sem percorrer todos os atores nem há agregação de perfis de permissões. É pensar na lista de permissões como se fosse um bilhete para o cinema.
+
