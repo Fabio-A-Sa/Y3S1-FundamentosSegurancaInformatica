@@ -68,3 +68,13 @@ printf("<endereço>%d%d%d%d%d%s)
 
 O código anterior permite ler o conteúdo da zona de memória apontada por um endereço arbitrário, já que a própria string de formatação está na stack. <br>
 Existe também uma hipótese de formatação com a `sprintf()` e o radical `%n`, que escreve numa zona arbitrária de memória a quantidade, num inteiro, de bytes que já escreveu. Assim é possível escrever endereços completos por parte do atacante. 
+
+## Segurança no Controlo
+
+Nos sistemas mais modernos, existem algumas técnicas para mitigar as vulnerabilidades anteriores:
+
+- Uma página de memória executável não pode ser escrita;
+- Uma página de memória com permissões de escrita não podem ser executáveis;
+- Randomização do espaço de endereços;
+
+Em alternativa, os ataques podem ocorrer sem injeção de código malicioso: usando as bibliotecas do próprio sistema operativo, como a famosa `libc`, pois tem incorporadas funções de chamada ao sistema.
