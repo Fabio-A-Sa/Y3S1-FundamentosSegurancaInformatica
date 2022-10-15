@@ -69,7 +69,7 @@ printf("<endereço>%d%d%d%d%d%s)
 O código anterior permite ler o conteúdo da zona de memória apontada por um endereço arbitrário, já que a própria string de formatação está na stack. <br>
 Existe também uma hipótese de formatação com a `sprintf()` e o radical `%n`, que escreve numa zona arbitrária de memória a quantidade, num inteiro, de bytes que já escreveu. Assim é possível escrever endereços completos por parte do atacante. 
 
-### Segurança no Controlo
+### Técnicas de mitigação
 
 Nos sistemas mais modernos, existem algumas técnicas para mitigar as vulnerabilidades anteriores:
 
@@ -88,4 +88,6 @@ A ideia dos ataques deste tipo é substituir o endereço de retorno da função 
 Se uma função não receber parâmetros, a função que a chama apenas precisa de armazenar na stack o endereço de retorno. Assim dá para encadear execuções de funções, basta colocar na stack consecutivos endereços de retorno.
 
 Este caso continua a funcionar se a última função desta cadeia for a única a receber parâmetros. Para encadear funções com parâmetros entre si podemos usar pedaços de código em assembly que dão pop() ou modificam endereços da stack que não interessam entre os argumentos necessários para o ataque. 
+
+# Segurança no controlo de Software
 
