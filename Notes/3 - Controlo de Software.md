@@ -91,3 +91,17 @@ Este caso continua a funcionar se a última função desta cadeia for a única a
 
 # Defesas
 
+Atualmente há minimização da probabilidade de erros na gestão de memória, para que os ataques anteriores não ocorram.
+
+## Mitigação na Plataforma
+
+### Data Execution Prevention
+
+Garantir que a memória tem permissões de execução ou de escrita mas não as duas ao mesmo tempo. Assim a injeção de código malicioso é barrado. No entanto, este mecanismo não é compatível com Just In Time Compilation.
+
+### Address Space Layout Randomization
+
+A localização de código e dados em memória (até mesmo o código de bibliotecas) é gerada de forma aleatória em cada execução. É uma resposta aos ataques do tipo ROP (Return Oriented Programming), embora com Heap Spraying e olhando para o Kernel pode haver uma previsão da ordem do código.
+
+## Mitigações no Executável
+
