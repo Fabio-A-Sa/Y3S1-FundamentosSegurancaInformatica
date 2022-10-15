@@ -120,4 +120,9 @@ Previnem injeção de código detectando modificações à stack. Ao introduzir 
 - Garantir que os buffers estão sempre juntos ao canário;
 - Copiar os argumentos da função para o topo da stack (abaixo dos buffers locais);
 - Usar uma shadow stack, que é redundante e serve apenas para controlo (endereços frame e de retorno, dados sensíveis), em que antes de qualquer função retornar há verificação da consistência;
+- Memory Tagging, os endereços têm um campo adicional que só pode ser reescrito através de instruções especiais;
+
+### Control Flow Integrity
+
+Criação de grafos do sistema para garantir a integridade das chamadas entre funções e assim uma função pode saber quais partes do código que a podem chamar. O ROT (Return Oriented Programming) já não é possível neste cenário
 
