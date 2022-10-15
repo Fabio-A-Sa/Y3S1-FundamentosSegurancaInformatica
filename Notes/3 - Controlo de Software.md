@@ -126,3 +126,8 @@ Previnem injeção de código detectando modificações à stack. Ao introduzir 
 
 Criação de grafos do sistema para garantir a integridade das chamadas entre funções e assim uma função pode saber quais partes do código que a podem chamar. O ROT (Return Oriented Programming) já não é possível neste cenário
 
+## Mitigação no Programa
+
+### Program Safety
+
+Definir o que é a semântica da linguagem e avaliar o código de acordo com essas regras. Assim pode não ser permitido ler ou escrever em determinadas zonas de memória, ler conteúdo de variáveis não declaradas, interpretar como instruções executáveis dados inválidos. 
