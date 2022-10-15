@@ -105,3 +105,7 @@ A localização de código e dados em memória (até mesmo o código de bibliote
 
 ## Mitigações no Executável
 
+### Canários
+
+Previnem injeção de código detectando modificações à stack. Ao introduzir valores constantes (canários) na stack com valor conhecido, os atacantes provavelmente irão reescrever esses valores aquando do buffer overflow. Antes de qualquer retorno da função atual, há verificação do valor do canário e se algo for diferente o programa fecha antes de executar parte do código malicioso injectado.
+
