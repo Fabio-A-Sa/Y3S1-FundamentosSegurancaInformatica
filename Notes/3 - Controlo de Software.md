@@ -89,5 +89,5 @@ Se uma função não receber parâmetros, a função que a chama apenas precisa 
 
 Este caso continua a funcionar se a última função desta cadeia for a única a receber parâmetros. Para encadear funções com parâmetros entre si podemos usar pedaços de código em assembly que dão pop() ou modificam endereços da stack que não interessam entre os argumentos necessários para o ataque. 
 
-# Segurança no controlo de Software
+# Defesas
 
