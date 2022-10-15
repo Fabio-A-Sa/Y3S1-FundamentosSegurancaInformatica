@@ -20,10 +20,11 @@ Forma de garantir que os utilizadores acedem a recursos de acordo com os seus pr
 
 ### 4.2.1 - Matriz de Acessos
 
-Descreve todos os possíveis acessos para cada ator. Por um lado é uma representação clara e eficiente, por outro pode tornar-se muito grande derivado do tamanho do sistema.
+Descreve todos os possíveis acessos para cada ator. Por um lado é uma representação clara e eficiente, por outro pode tornar-se muito grande derivado do tamanho que pode ter o sistema.
 
-### 4.2.2 - Lista de controlo de acessos
+### 4.2.2 - Lista de controlo de acessos (ACL)
 
-#TODO
+Cada recurso contém uma lista de permissões dos actores sobre esse próprio. Por um lado garante que um recurso pode apenas ser acedido por uma gama de atores, pois o acesso está associado ao próprio recurso, por outro não é possível determinar as permissões que um ator tem sem ver todos os recursos (por exemplo para remover um ator) nem há agregação de perfis de permissões.
 
+### 4.2.3 - Listas de permissões (Capabilities)
 
