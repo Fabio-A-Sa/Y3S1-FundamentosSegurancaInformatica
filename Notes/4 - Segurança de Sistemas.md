@@ -30,3 +30,11 @@ Cada recurso contém uma lista de permissões dos actores sobre esse próprio. P
 
 Para cada ator, as operações que pode realizar sobre cada recurso. Por um lado faz-nos lidar com cada ator individualmente (armazenamento associado ao ator) e garante que um ator pode aceder a um número limitado de recursos. Por outro lado não é possível determinar todos os atores que podem manipular determinado recurso sem percorrer todos os atores nem há agregação de perfis de permissões. É pensar na lista de permissões como se fosse um bilhete para o cinema.
 
+### 4.2.4 - Role Based Access Control (RBAC)
+
+Usado nos sistemas Unix. Permite a ligação de perfis a conjuntos de permissões e ligação de atores a perfis. As permissões de leitura, escrita e execução (rwx) estão ligadas aos perfis de dono, grupo e outros. 
+
+É um caso particular do ABAC, em que existe uma matriz de permissões com base nos atributos que descreve que para aceder a um recurso com atributo A o ator deve possuir o atributo B.
+
+## 4.3 - Aplicação dos conceitos em sistemas operativos
+
