@@ -130,4 +130,8 @@ Criação de grafos do sistema para garantir a integridade das chamadas entre fu
 
 ### Program Safety
 
-Definir o que é a semântica da linguagem e avaliar o código de acordo com essas regras. Assim pode não ser permitido ler ou escrever em determinadas zonas de memória, ler conteúdo de variáveis não declaradas, interpretar como instruções executáveis dados inválidos. 
+Definir o que é a semântica da linguagem e avaliar o código de acordo com essas regras. Assim pode não ser permitido ler ou escrever em determinadas zonas de memória, ler conteúdo de variáveis não declaradas, interpretar como instruções executáveis dados inválidos. São exemplos as linguagens Java e Haskell, que verificam tipo e condições em tempo de execução, o que torna a execução mais demorada do que a linguagem C, por exemplo. Há sempre tradeoff entre
+
+### Verificação de Programas
+
+Usados em componentes críticos que usam ferramentas de verificação e correção do código, para haver garantia de utilização correcta da memória, por exemplo. É uma defesa em profundidade com grandes custos.
