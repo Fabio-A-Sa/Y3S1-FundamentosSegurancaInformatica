@@ -83,6 +83,9 @@ Em alternativa, os ataques podem ocorrer sem injeção de código malicioso: usa
 
 A ideia dos ataques deste tipo é substituir o endereço de retorno da função atual pelo endereço de uma função da libc e configurar a stack com os parâmetros que essa função necessita. Para evitar um crash, usar a função da libc exit(0). São sempre exploits complicados porque é difícil um endereço não conter \0.
 
-### Return Oriented Programs
+### Return Oriented Programming
 
 Se uma função não receber parâmetros, a função que a chama apenas precisa de armazenar na stack o endereço de retorno. Assim dá para encadear execuções de funções, basta colocar na stack consecutivos endereços de retorno.
+
+Este caso continua a funcionar se a última função desta cadeia for a única a receber parâmetros. Para encadear funções com parâmetros entre si podemos usar pedaços de código em assembly que dão pop() ou modificam endereços da stack que não interessam entre os argumentos necessários para o ataque. 
+
