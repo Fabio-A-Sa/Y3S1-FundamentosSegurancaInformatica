@@ -38,3 +38,8 @@ Usado nos sistemas Unix. Permite a ligação de perfis a conjuntos de permissõe
 
 ## 4.3 - Aplicação dos conceitos em sistemas operativos
 
+O Sistema Operativo é a interface entre os utilizadores e o hardware. Este faz a gestão dos recursos por parte das aplicações. Mas como os atacantes podem controlar utilizadores, aplicações e usurpar permissões, pelo que tem de garantir que não há acessos abusivos. Para isso há uma série de aspectos de segurança que tem em consideração:
+
+- Isolamento virtual entre utilizadores, aplicações e processos;
+- Estar sempre a partilhar somente os recursos disponíveis no sistema;
+- Aplica o privilégio mínimo, separação de privilégios;
