@@ -109,3 +109,9 @@ A localização de código e dados em memória (até mesmo o código de bibliote
 
 Previnem injeção de código detectando modificações à stack. Ao introduzir valores constantes (canários) na stack com valor conhecido, os atacantes provavelmente irão reescrever esses valores aquando do buffer overflow. Antes de qualquer retorno da função atual, há verificação do valor do canário e se algo for diferente o programa fecha antes de executar parte do código malicioso injectado.
 
+#### Derrotando os canários
+
+- Podemos aproveitar os apontadores, reescrevendo o valor do canário num endereço conhecido através de overflow;
+- Antes da função retornar (ou seja, antes de haver verificação do canário), chamar uma função que pode executar código malicioso;
+- Brute force, tentando todas as combinações de bytes ou construindo a solução byte a byte;
+
