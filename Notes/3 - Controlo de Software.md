@@ -81,3 +81,8 @@ Nos sistemas mais modernos, existem algumas técnicas para mitigar as vulnerabil
 
 Em alternativa, os ataques podem ocorrer sem injeção de código malicioso: usando as bibliotecas do próprio sistema operativo, como a famosa `libc`, pois tem incorporadas funções de chamada ao sistema (*system*) e que alteram as permissões de memória (*mprotect*). Os seus endereços são mais fáceis de prever.
 
+A ideia dos ataques deste tipo é substituir o endereço de retorno da função atual pelo endereço de uma função da libc e configurar a stack com os parâmetros que essa função necessita. Para evitar um crash, usar a função da libc exit(0). São sempre exploits complicados porque é difícil um endereço não conter \0.
+
+### Return Oriented Programs
+
+Se uma função não receber parâmetros, a função que a chama apenas precisa de armazenar na stack o endereço de retorno. Assim dá para encadear execuções de funções, basta colocar na stack consecutivos endereços de retorno.
