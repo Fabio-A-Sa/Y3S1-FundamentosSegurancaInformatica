@@ -24,13 +24,8 @@
 - Um potencial ataque permitiria um utilizador obter acesso a diversas funções admnistrativas da plataforma.
 
 ### Fontes consultadas
+
 - https://www.cvedetails.com/cve-details.php?t=1&cve_id=CVE-2019-3810
 - https://github.com/farisv/Moodle-CVE-2019-3810
 - https://moodle.org/mod/forum/discuss.php?d=381230#p1536767
 - https://www.cvedetails.com/cve-details.php?t=1&cve_id=CVE-2019-3810
-
-### Grupo L05G05
-
-- Alexandre Guimarães Gomes Correia (up202007042@fe.up.pt);
-- Fábio Araújo de Sá (up202007658@fe.up.pt);
-- Lourenço Alexandre Correia Gonçalves (up202004816@fe.up.pt);
