@@ -61,3 +61,7 @@ A própria tradução de endereços, a busca de páginas no disco para a cache e
 - um processo não pode aceder ao espaço de memória de outro processo;
 - confidencialidade, integridade e controlo de fluxo do kernel tem de ser protegida de todos os processo que executam em user mode;
 - Nem o Kernel deve ser capaz de violar a regra W^X;
+
+### 4.3.2 - Sistema de Ficheiros
+
+Cada recurso tem um owner e um grupo e as permissões são atribuídas ao owner, grupo e outros segundo a gama rwx. O superuser (sudo) tem permissões totais sobre o sistema.
