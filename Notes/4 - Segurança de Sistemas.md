@@ -72,3 +72,15 @@ Um processo tem, de facto, três UIDs:
 1. Effective User ID, determina as permissões;
 2. Real User ID, utilizador que lançou o processo;
 3. Saved User ID: utilizado em transições, lembra sempre o anterior;
+
+### 4.3.3 - Confinamento
+
+Quando se executa código proveniente de fontes externas e para segurança deve ser contida. Por exemplo o javascript a correr nos browsers e sistema legacy.
+
+#### Air Gap
+
+Não há ligação física entre a máquina que executa o possível código malicioso e os recursos que queremos proteger. Pode ser implementado em hardware. A desvantagem é que é difícil de gerir.
+
+#### Máquinas Virtuais
+
+Os **hypervisors** oferecem visão virtual de hardware a cada sistema operativo, mas ambos contidos e independentes. Muito usado em sistemas cloud.
