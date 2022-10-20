@@ -75,7 +75,7 @@ Um processo tem, de facto, três UIDs:
 
 ### 4.3.3 - Confinamento
 
-Quando se executa código proveniente de fontes externas e para segurança deve ser contida. Por exemplo o javascript a correr nos browsers e sistema legacy.
+Quando se executa código proveniente de fontes externas e para segurança deve ser contida. Por exemplo o javascript a correr nos browsers e sistema legacy. Para mitigar isso há monitorização e medição de todos os pedidos de acesso a recursos: criação de Jails ou containers.
 
 #### Air Gap
 
@@ -84,3 +84,11 @@ Não há ligação física entre a máquina que executa o possível código mali
 #### Máquinas Virtuais
 
 Os **hypervisors** oferecem visão virtual de hardware a cada sistema operativo, mas ambos contidos e independentes. Muito usado em sistemas cloud.
+
+#### SFI e SCI
+
+SFI (Software Fault Isolation), para isolamento de processos que partilham o mesmo espaço de endereçamento, e SCI (System Call Interposition), para monitorização de pontos de acesso a operações priveligiados. 
+
+#### Sandboxing
+
+Confinamento dentro da própria aplicação, como por exemplo nos browsers mais recentes.
