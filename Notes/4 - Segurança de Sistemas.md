@@ -43,3 +43,7 @@ O Sistema Operativo é a interface entre os utilizadores e o hardware. Este faz 
 - Isolamento virtual entre utilizadores, aplicações e processos;
 - Estar sempre a partilhar somente os recursos disponíveis no sistema;
 - Aplica o privilégio mínimo, separação de privilégios;
+
+### 4.3.1 - Kernel
+
+Permite uma zona de isolamento e controlo de acessos. Há dois principais modos de operação no linux: kernel mode e user mode. A zona de ataque é a fronteira das suas camadas, ou seja, as system calls.
