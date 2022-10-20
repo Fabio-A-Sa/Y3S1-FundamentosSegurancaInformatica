@@ -51,10 +51,13 @@ Tem de existir um Modelo de Confiança: confiar inicialmente no processador e no
 
 #### Ataques
 
-Podem ocorrer ataques em todos os níveis do boot: BIOS corrompida, bootloader corrompido, ficheiros de hibernação corrompidos. A maioria dos erros e falhas surgem de problemas de administração. 
+Podem ocorrer ataques em todos os níveis do boot: BIOS corrompida, bootloader corrompido, ficheiros de hibernação corrompidos. A maioria dos erros e falhas surgem de problemas de administração. <br>
+A própria tradução de endereços, a busca de páginas no disco para a cache e as árvores de tradução devem permitir `kernel mapping`: quando um processo faz uma system call, não é necessário alterar o sistema de mapeamento de páginas pois a memória relevante do kernel já está mapeada e coexiste no mesmo espaço de endereçamento. 
 
 #### Mitigação
 
 - monitorização constante;
 - assinatura de código legítimo;
-- 
+- um processo não pode aceder ao espaço de memória de outro processo;
+- confidencialidade, integridade e controlo de fluxo do kernel tem de ser protegida de todos os processo que executam em user mode;
+- Nem o Kernel deve ser capaz de violar a regra W^X;
