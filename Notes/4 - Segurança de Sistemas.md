@@ -64,4 +64,11 @@ A própria tradução de endereços, a busca de páginas no disco para a cache e
 
 ### 4.3.2 - Sistema de Ficheiros
 
-Cada recurso tem um owner e um grupo e as permissões são atribuídas ao owner, grupo e outros segundo a gama rwx. O superuser (sudo) tem permissões totais sobre o sistema.
+Cada recurso tem um owner e um grupo e as permissões são atribuídas ao owner, grupo e outros segundo a gama rwx. O superuser (sudo) tem permissões totais sobre o sistema. <br>
+O `setuid` é uma forma de o utilizador X executar um programa com os privilégios do dono do ficheiro. Permite escalar privilégios, tal como vimos no Logbook 4.
+
+Um processo tem, de facto, três UIDs:
+
+1. Effective User ID, determina as permissões;
+2. Real User ID, utilizador que lançou o processo;
+3. Saved User ID: utilizado em transições, lembra sempre o anterior;
