@@ -46,4 +46,15 @@ O Sistema Operativo é a interface entre os utilizadores e o hardware. Este faz 
 
 ### 4.3.1 - Kernel
 
-Permite uma zona de isolamento e controlo de acessos. Há dois principais modos de operação no linux: kernel mode e user mode. A zona de ataque é a fronteira das suas camadas, ou seja, as system calls.
+Permite uma zona de isolamento e controlo de acessos entre processos. Há dois principais modos de operação no linux: kernel mode e user mode. A zona de ataque é a fronteira das suas camadas, ou seja, as system calls, que acedem a recursos. <br>
+Tem de existir um Modelo de Confiança: confiar inicialmente no processador e no kernel instalado. 
+
+#### Ataques
+
+Podem ocorrer ataques em todos os níveis do boot: BIOS corrompida, bootloader corrompido, ficheiros de hibernação corrompidos. A maioria dos erros e falhas surgem de problemas de administração. 
+
+#### Mitigação
+
+- monitorização constante;
+- assinatura de código legítimo;
+- 
