@@ -61,6 +61,8 @@ A própria tradução de endereços, a busca de páginas no disco para a cache e
 - um processo não pode aceder ao espaço de memória de outro processo;
 - confidencialidade, integridade e controlo de fluxo do kernel tem de ser protegida de todos os processo que executam em user mode;
 - Nem o Kernel deve ser capaz de violar a regra W^X;
+- namespaces, para cada processo ter visível somente alguns recursos;
+- cgroups, gere a quantidade de recursos a que cada processo tem acesso;
 
 ### 4.3.2 - Sistema de Ficheiros
 
@@ -83,12 +85,29 @@ Não há ligação física entre a máquina que executa o possível código mali
 
 #### Máquinas Virtuais
 
-Os **hypervisors** oferecem visão virtual de hardware a cada sistema operativo, mas ambos contidos e independentes. Muito usado em sistemas cloud.
+O **hypervisor** é uma camada intermédia entre o sistema operativo original e as virtualizações, oferece visão virtual de hardware a cada sistema operativo, mas ambos contidos e independentes. Muito usado em sistemas cloud.
 
 #### SFI e SCI
 
 SFI (Software Fault Isolation), para isolamento de processos que partilham o mesmo espaço de endereçamento, e SCI (System Call Interposition), para monitorização de pontos de acesso a operações priveligiados. 
 
+##### SCI Racional
+
+A superfície de ataque são as system calls. Assim, é necessário monitorizar as mesmas e bloquear as que não são autorizadas. Exemplos de soluções:
+
+- `ptrace`, system call antes de cada system call. Monitoriza e aborta a operação caso o processo não tenha autorização a determinados recursos. Desvantagens: cada subprocesso tinha de ter outro monitor, o que era limitativo, e é vulnerável a race condition attacks.
+- `seccomp`, secure computing mode, o processo quando chama **prctl** só pode retornar ou utilizar ficheiros já abertos e uma violação da regra leva o Kernel a abortar o processo. Com **bpf - berkeley packet filter** é possível configurar melhor a utilização das systems calls do processo em modo seguro. 
+
+##### SFI 
+
+Limitação da zona de memória acessível por cada processo, utilização de espaço de endereços diferentes e segundo o mandamento do privilégio mínimo. É importante isolar as operações load/store e jumps.
+
 #### Sandboxing
 
 Confinamento dentro da própria aplicação, como por exemplo nos browsers mais recentes.
+
+#### Docker
+
+Containers que permitem rodar programas em ambientes isolados e reproduzíveis. É mais portátil, há criação de containers por layers incrementais e permite a composição de containers préexistentes. No entanto, o deamon docker (gere containers, discos virtuais e redes) tem permissões de root.
+
+#TODO -> Fim dos slides
