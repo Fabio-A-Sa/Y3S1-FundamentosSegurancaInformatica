@@ -35,3 +35,6 @@ O Javascript pode alterar o DOM do documento HTML dinamicamente.
 ### SOP - Same Origin Policy
 
 Cada frame tem uma origem (com esquema, nome do domínio e porta). Só frames/iframes da mesma origem é que vão poder comunicar entre si. 
+
+#TODO -> Até ao fim dos slides
+
