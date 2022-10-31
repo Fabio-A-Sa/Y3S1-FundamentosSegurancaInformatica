@@ -85,7 +85,7 @@ Não há ligação física entre a máquina que executa o possível código mali
 
 #### Máquinas Virtuais
 
-O **hypervisor** é uma camada intermédia entre o sistema operativo original e as virtualizações, oferece visão virtual de hardware a cada sistema operativo, mas ambos contidos e independentes. Muito usado em sistemas cloud.
+O **hypervisor** é uma camada intermédia entre o sistema operativo original e as virtualizações, oferece visão virtual de hardware a cada sistema operativo, mas ambos contidos e independentes. Muito usado em sistemas cloud. Garantem compatibilidade e performence, mas não garantem transparência já que têm um comportamento indistinguível do não virtualizado.
 
 #### SFI e SCI
 
@@ -110,4 +110,8 @@ Confinamento dentro da própria aplicação, como por exemplo nos browsers mais 
 
 Containers que permitem rodar programas em ambientes isolados e reproduzíveis. É mais portátil, há criação de containers por layers incrementais e permite a composição de containers préexistentes. No entanto, o deamon docker (gere containers, discos virtuais e redes) tem permissões de root.
 
-#TODO -> Fim dos slides
+Será que um programa está a correr numa máquina virtual? Será que uma página web sabe que está a correr numa máquina virtual? O programa pode mudar o seu comportamento para não ser apanhado. Existem várias formas de perceber se está a correr numa máquina virtual:
+
+- As instruções disponíveis;
+- Latência no acesso a memória (cache);
+- O hypervisor utiliza parte dos mecanismos de gestão do HW, pelo que pode detectar a limitação de recursos;
