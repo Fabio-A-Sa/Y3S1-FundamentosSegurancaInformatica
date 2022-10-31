@@ -73,15 +73,25 @@ Atques mesmo para pedidos sem side-effects no servidors, monitorando os eventos 
 
 #### Insecure Direct Object Reference (IDOR)
 
-
+Quando não há controlo de acessos ou quando estes são limitados. 
 
 ### Injection
 
 Acontecem quando o input não é validado e não há uma separação clara entre os dados e o tratamento dos mesmos pelo sistema. 
 
-#### Servidores CGI
-
 #### SQL Injection
+
+Sanitizar os inputs. Os inputs não devem ser parte do comando mas sim parâmetros injectados em formato de texto. Nunca criar comandos SQL dinamicamente como strings.
 
 #### Cross-Site Scripting (XSS)
 
+Ignora o SOP, pois quem corre o código malicioso é o próprio cliente. O atacante consegue convencer o cliente a correr código malicioso no seu browser para um site legítimo, para que este possa ver a resposta. Existem dois tipos de XSS:
+
+- Reflected, quando a máquina da pessoa atacada serve de meio para retirar informação dos servidores;
+- Stored, quando o ataque é permanente, colocado no servidor ou base de dados;
+
+Uma forma de prevenção de XSS é sempre validar os inputs, headers, cookies. Os mecanismos proporcionados por frameworks ainda são incompletos. Outra solução é usar Content Security Policy (CSP) para o site permitir ou não execução de scripts, dos seus próprios scripts ou de scripts que estejam numa white-list. 
+
+#### Insecure design
+
+O cliente não pode confiar no servidor (XSS, por exemplo, ou armazenamento das credienciais dos utilizadores de forma insegura), e o servidor não pode confiar no cliente (inputs inválidos, inputs negativos, gerar mensagens de erros com informação sensível, como versões ou logs).
