@@ -34,9 +34,25 @@ O Javascript pode alterar o DOM do documento HTML dinamicamente.
 
 ### SOP - Same Origin Policy
 
-Cada frame tem uma origem (com esquema, nome do domínio e porta). Só frames/iframes da mesma origem é que vão poder comunicar entre si. 
+Cada frame tem uma origem (com esquema, nome do domínio e porta). Só frames/iframes da mesma origem é que vão poder comunicar entre si.  <br>
+Para pedidos ao servidor:
 
-#TODO -> Até ao fim dos slides
+- Podemos criar frames com código HTML de outras origens, mas não podemos inspecionar ou modificar o conteúdo da frame;
+- Podemos obter e executar scripts de outras origens, mas esse código não pode manipular outro de javascript de outra origem;
+- O browser pode fazer rendering de imagens, CSS e fontes, mas o SOP proibe modificar píxeis ou outros parâmetros;
+
+#### Cookies
+
+Os browsers enviam todas as cookies no contexto de uma URL (diretamente no pedido) se:
+
+- o domínio da cookie for um sufixo do domínio da URL;
+- a path da cookie for um prefixo da path da URL;
+
+Na resposta HTTP em que o servidor fornece a cookie, o atributo **SameSite** pode ser strict (para a mesma origem), lax (o default atual, para distinguir alguns pedidos). As cookies seguras são aquelas enviadas por HTTPS.
+
+### CORS - Cross-Origin Resource Sharing
+
+Permite relaxar o SOP. O servidor permite ao Browser recolher também os recursos de outros servidores através de flags aquando dos pedidos. 
 
 ## Ataques
 
