@@ -4,7 +4,7 @@
 
 1. Introdução
     - Motivações para os ataques;
-    - 
+    - Atores e atacantes;
 2. 
 
 ## 1. Introdução
@@ -18,4 +18,8 @@
 - Perda de confiança global em certas empresas;
 - Motivações políticas;
 
-### 1.2 - 
+### 1.2 - Atores e Atacantes
+
+Os atores são as entidades que intervêm no sistema (pessoas, organizações, empresas, máquinas), os atacantes/adversários são  
+
+A segurança define-se sob o ponto de vista dos atores. Pode-se depositar confiança em alguns atores/componentes.
