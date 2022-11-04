@@ -45,4 +45,8 @@ A matriz da análise dos riscos tem dois eixos: probabilidade de ameaça com imp
 - **Ameaça**, causas possíveis para um incidente que possa causar danos em ativos;
 - **Exploit**, método de explorar a vulnerabilidade;
 - **Ataque**, quando alguém explora a vulnerabilidade. Podem ser ativos ou passivos. A estrutura de um ataque MOM: Motivo/Ameaça, Oportunidade/Vulnerabilidade, Método/Exploit;
-- **Confiabilidade**, um sistema é confiável se faz exatamente o especificado e está de acordo com um modelo de confiança e as politicas de segurança.
+- **Confiabilidade**, um sistema é confiável se faz exatamente o especificado e está de acordo com um modelo de confiança e as politicas de segurança. São necessárias três etapas para o processo de confiabilidade:
+    - Definir o problema, modelo de confiança e solução;
+    - Validar e justificar a solução;
+    - Auditoria de segurança;
+
