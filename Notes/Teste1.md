@@ -6,6 +6,7 @@
     - Motivações para os ataques;
     - Atores e atacantes;
     - Modelos de segurança;
+    - Segurança e terminologias;
 2. 
 
 ## 1. Introdução
@@ -29,7 +30,13 @@ A segurança define-se sob o ponto de vista dos atores. Pode-se depositar confia
 
 #### 1.3.1 - Modelo Binário
 
-
+Caracterização formal do atacante, do sistema, e garante que o sistema é seguro com determinados ataques. Gasta-se tempo com definições, não escala para sistemas complexos, ignora side-channels.
 
 #### 1.3.2 - Modelo de Gestão de Risco
 
+Diminui e mitiga os riscos em função das ameaças mais prováveis. Equilibra o custo da manutenção com o custo das perdas. No entanto pode haver incorreção entre a análise dos riscos deitando tudo por terra, não há segurança total. <br>
+A matriz da análise dos riscos tem dois eixos: probabilidade de ameaça com impacto no ativo (o que constui valor para o sistema).
+
+### 1.4 - Segurança
+
+É um equilíbrio de CIA (confidencialidade, integridade e disponibilidade), um compromisso entre segurança, funcionalidade e usabilidade. 
