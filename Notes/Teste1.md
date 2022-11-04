@@ -5,6 +5,7 @@
 1. Introdução
     - Motivações para os ataques;
     - Atores e atacantes;
+    - Modelos de segurança;
 2. 
 
 ## 1. Introdução
@@ -23,3 +24,12 @@
 Os atores são as entidades que intervêm no sistema (pessoas, organizações, empresas, máquinas), os atacantes/adversários são  
 
 A segurança define-se sob o ponto de vista dos atores. Pode-se depositar confiança em alguns atores/componentes.
+
+### 1.3 - Modelos de segurança
+
+#### 1.3.1 - Modelo Binário
+
+
+
+#### 1.3.2 - Modelo de Gestão de Risco
+
