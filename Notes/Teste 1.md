@@ -2,12 +2,12 @@
 
 ## Tópicos
 
-1. Introdução
+1. Introdução:
     - Motivações para os ataques;
     - Atores e atacantes;
     - Modelos de segurança;
     - Segurança e terminologias;
-2. 
+2. Segurança de software:
 
 ## 1. Introdução
 
@@ -49,4 +49,6 @@ A matriz da análise dos riscos tem dois eixos: probabilidade de ameaça com imp
     - Definir o problema, modelo de confiança e solução;
     - Validar e justificar a solução;
     - Auditoria de segurança;
+
+## 2. Segurança de Software
 
