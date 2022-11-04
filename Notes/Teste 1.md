@@ -37,6 +37,12 @@ Caracterização formal do atacante, do sistema, e garante que o sistema é segu
 Diminui e mitiga os riscos em função das ameaças mais prováveis. Equilibra o custo da manutenção com o custo das perdas. No entanto pode haver incorreção entre a análise dos riscos deitando tudo por terra, não há segurança total. <br>
 A matriz da análise dos riscos tem dois eixos: probabilidade de ameaça com impacto no ativo (o que constui valor para o sistema).
 
-### 1.4 - Segurança
+### 1.4 - Segurança e terminologias
 
 É um equilíbrio de CIA (confidencialidade, integridade e disponibilidade), um compromisso entre segurança, funcionalidade e usabilidade. 
+
+- **Vulnerabilidade**,  falhas que estão acessíveis ao adversário;
+- **Ameaça**, causas possíveis para um incidente que possa causar danos em ativos;
+- **Exploit**, método de explorar a vulnerabilidade;
+- **Ataque**, quando alguém explora a vulnerabilidade. Podem ser ativos ou passivos. A estrutura de um ataque MOM: Motivo/Ameaça, Oportunidade/Vulnerabilidade, Método/Exploit;
+- **Confiabilidade**, um sistema é confiável se faz exatamente o especificado e está de acordo com um modelo de confiança e as politicas de segurança.
