@@ -11,6 +11,7 @@
     - Overflow na stack;
     - Overflow na heap;
     - Overflow de inteiros;
+    - Strings de formatação;
 
 ## 1. Introdução
 
@@ -72,4 +73,4 @@ Semelhante ao da heap, mas com exploit mais complicado pois a heap é dinâmicam
 
 ## 2.3 - Overflow de inteiros
 
-
+O processo de truncatura ou multiplicação pode diminuir ou até trocar o sinal do valor inicialmente colocado. Esta técnica serve para alocar um buffer demasiado pequeno (ocorre overflow) ou crash ao servidor (ocorre DoS).
