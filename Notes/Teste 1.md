@@ -10,7 +10,7 @@
 2. Segurança de software:
     - Overflow na stack;
     - Overflow na heap;
-    - Integer overflow;
+    - Overflow de inteiros;
 
 ## 1. Introdução
 
@@ -65,4 +65,9 @@ Funções como `strcpy` podem copiar mais do que o buffer estático alocado, pod
 - stack pointer (esp);
 
 ### 2.2 - Overflow na Heap
+
+Semelhante ao da heap, mas com exploit mais complicado pois a heap é dinâmicamente gerida e não há tanta facilidade de prever endereços. Tenta-se manipular os endereços contidos na heap, como apontadores para funções (vTables), linking dinâmico com bibliotecas, tratamento de excepções. <br>A escrita é feita através de mallocs, que escrevem e reescrevem endereços para blocos de memória. Ao exceder os limites destes blocos, podemos tentar escrever novos endereços que apontem para código malicioso.
+- `Heap spraying`, quando se enche ao máximo a heap de código malicioso com NOPs para aumentar a chance de controlo;
+- `Use after free`, nada garante que apontadores já free() não apontem para zonas de memória entretanto manipuladas;
+
 
