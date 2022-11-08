@@ -20,6 +20,8 @@
     - Sistemas operativos;
     - Permissões;
     - Confinamento;
+4. Segurança da Web:
+    - 
 
 ## 1. Introdução
 
@@ -157,3 +159,5 @@ Um software pode detectar que está a correr numa máquina virtual:
 - Instruções disponíveis;
 - Latência no acesso à memória cache;
 - O hypervisor utiliza parte dos mecanismos de gestão do HW pelo que pode detectar a limitação de recursos;
+
+## 4. Segurança da Web
