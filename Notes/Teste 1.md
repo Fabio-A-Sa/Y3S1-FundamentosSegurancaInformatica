@@ -88,3 +88,6 @@ Substitui-se o endereço de retorno por uma função mas antes disso configura-s
 
 ### 2.6 - Prevenções
 
+- DEP, Data execution prevention, ou tem permissões de escrita ou de execução, não ambas;
+- ASLR, Address Space Layout Randomization, até para endereços do kernel;
+- 
