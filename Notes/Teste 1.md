@@ -82,3 +82,5 @@ Funções como `printf` recorrem a parâmetros e a percentagens para ir buscar �
 
 ### 2.5 - Return Oriented Programming
 
+Na impossibilidade de injectar código na stack ou heap (devido à randomização de endereços), o que resta é reutilizar código que já está no sistema: as bibliotecas, como a libc que contém `system` e `mprotect`. <br>
+Substitui-se o endereço de retorno por uma função mas antes disso configura-se a stack com o parâmetro. Utilizar também a `exit` para retornar sem dar crash e não ser detectado.
