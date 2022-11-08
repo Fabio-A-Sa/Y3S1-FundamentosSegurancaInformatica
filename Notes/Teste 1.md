@@ -57,9 +57,12 @@ A matriz da análise dos riscos tem dois eixos: probabilidade de ameaça com imp
 
 ### 2.1 - Overflow na Stack
 
-A stack é constituída começa nos endereços mais elevados e cresce no sentido da heap, para endereços mais baixos. A ordem da alocação é sempre a mesma:
+Funções como `strcpy` podem copiar mais do que o buffer estático alocado, podendo reescrever endereços e injectar shellcode. A stack é constituída começa nos endereços mais elevados e cresce no sentido da heap, para endereços mais baixos. A ordem da alocação é sempre a mesma:
 - frame pointer (ebp) da função que chamou;
 - alocação de espaço para as variáveis locais;
 - alocação de espaço para os argumentos da funço que vai chamar;
 - endereço de retorno;
 - stack pointer (esp);
+
+### 2.2 - Overflow na Heap
+
