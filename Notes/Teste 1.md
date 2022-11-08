@@ -70,4 +70,6 @@ Semelhante ao da heap, mas com exploit mais complicado pois a heap é dinâmicam
 - `Heap spraying`, quando se enche ao máximo a heap de código malicioso com NOPs para aumentar a chance de controlo;
 - `Use after free`, nada garante que apontadores já free() não apontem para zonas de memória entretanto manipuladas;
 
+## 2.3 - Overflow de inteiros
+
 
