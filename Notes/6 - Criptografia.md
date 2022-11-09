@@ -38,11 +38,19 @@ Permitem construir cifras. Dado uma chave aleatória K e um input B de 16 bytes,
 - `DES`, Data Encryption Standard, usado até 2000 com blocos de 64 bits e chaves até 56 bits;
 - `AES`, Advanced Encryption Standard, usado desde 2000 com blocos de 128 bits e chaves de 128 até 512 bits;
 
-#### Eletronic Code Book
+#### Eletronic Code Book (ECB)
 
 Método inseguro de utilização das cifras de bloco, pois blocos do ficheiro iguais geral blocos do criptograma igmais.
 
-#### 
+#### Cipher Block Chaining (CBC)
+
+Mais seguro, porém complexo para implementar em hardware, logo é menos eficiente. Para a cifragem de cada bloco existe um parâmetro de input adicional que é:
+- um initialization vector (IV), se o bloco for o primeiro;
+- O output da cifragem do bloco anterior, caso contrário;
+
+#### Counter (CTR)
+
+
 
 ## Cifras assimétricas
 
