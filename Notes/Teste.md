@@ -17,6 +17,8 @@
 3. Segurança de sistemas:
     - Princípios fundamentais;
     - Controlo de acessos;
+    - Sistemas operativos;
+    - Permissões;
 
 ## 1. Introdução
 
@@ -119,3 +121,13 @@ Aplica o privilégio mínimo, a mediação completa e a separação de privilég
 - `Lista de permissões (capabilities)`, para cada ator há uma lista de operações sobre cada recurso;
 - `Role Based Access Control (RBAC)`, permite separar a gestão de recursos da gestão de atores. Os atores são agrupados em perfis (owner, group, other) e cada perfil tem determinadas permissões sobre o recurso. É exemplo o sistema Unix;
 - `Attribute-based Access Control (ABAC)`, os atores e recursos têm atributos e a matriz de acessos descreve as permissões com base nesses atributos. Para aceder a recurso com atributo A o ator deve possuir atributo B. 
+
+### 3.3 - Sistemas operativos
+
+Interface entre os utilizadores e o hardware. Garante isolamento de processos, utilizadores, partilha de recursos nas duas camadas: user mode e kernel mode. Os pontos de entrada para os ataques são as system calls e os daemons, que são processos que correm em segundo plano. Existem, para isso, várias medidas de mitigação:
+- Monitorização constante;
+- Mediação, por meio de assinaturas digitais;
+- Isolamento entre processos;
+- Kernel mapping, parte da memória do kernel já está mapeada na memória do processo com permissões diferentes para não ocorrer um page-fault e não ir à memória não volátil;
+- Defesa em profundidade, nem o Kernel pode violar W^X;
+- 
