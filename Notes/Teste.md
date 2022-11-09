@@ -138,7 +138,9 @@ Existem três tipos de UIDs:
 1. `Effective User ID`, determina as permissões;
 2. `Real User ID`, utilizador que lançou o processo;
 3. `Saved User ID`: utilizado em transições, lembra sempre o anterior;
-Um superuser tem o poder de criar processos, baixar e elevar as suas permissões usando `setuid`. O `seteuid` apenas altera o EUID. Os outros utilizadores têm o poder de baixar as suas permissões, mudando apenas EUID para RUID ou SUID. 
+Um superuser tem o poder de criar processos, baixar e elevar as suas permissões usando **setuid**. O **seteuid** apenas altera o EUID. Os outros utilizadores têm o poder de baixar as suas permissões, mudando apenas EUID para RUID ou SUID. 
 
 ### 3.5 - Confinamento
 
+- Air Gap, o código malicioso não afeta o sistema, pois este está desligado devido ao hardware. No entanto é difícil de gerir;
+- 
