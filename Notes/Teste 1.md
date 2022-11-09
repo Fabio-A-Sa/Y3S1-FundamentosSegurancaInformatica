@@ -14,6 +14,9 @@
     - Strings de formatação;
     - Return oriented programming;
     - Prevenções;
+3. Segurança de sistemas:
+    - Princípios fundamentais;
+    - Controlo de acessos;
 
 ## 1. Introdução
 
@@ -88,10 +91,20 @@ Substitui-se o endereço de retorno por uma função mas antes disso configura-s
 
 ### 2.6 - Prevenções
 
-- DEP, Data execution prevention, ou tem permissões de escrita ou de execução, não ambas;
-- ASLR, Address Space Layout Randomization, até para endereços do kernel;
-- kBouncer, que verifica rets precedidos de calls, evita ROP no entanto está limitado a 16 execuções e é apenas para system calls;
-- Stack Canaries, com caracteres difíceis de escrever nas shell codes. Podem ser atacados com brute force ou sair sem retornar para a função anterior;
-- Memory tagging, liga os apontadores às regiões onde apontam através de uma tag de 4 bits que só pode ser manipulada com novas instruções;
-- Control Flow Integrity CFI, identifica pares origem-destino válidos, como num grafo;
-- Program Safety, usando linguagens tipadas com verificação e validação matemática;
+- `DEP, Data execution prevention`, ou tem permissões de escrita ou de execução, não ambas;
+- `ASLR, Address Space Layout Randomization`, até para endereços do kernel;
+- `kBouncer`, que verifica rets precedidos de calls, evita ROP no entanto está limitado a 16 execuções e é apenas para system calls;
+- `Stack Canaries`, com caracteres difíceis de escrever nas shell codes. Podem ser atacados com brute force ou sair sem retornar para a função anterior;
+- `Memory tagging`, liga os apontadores às regiões onde apontam através de uma tag de 4 bits que só pode ser manipulada com novas instruções;
+- `Control Flow Integrity CFI`, identifica pares origem-destino válidos, como num grafo;
+- `Program Safety`, usando linguagens tipadas com verificação e validação matemática;
+
+## 3. Segurança de Sistemas
+
+### 3.1 - Princípios fundamentais
+
+- Economia dos mecanismos, para facilitar a implementação, usabilidade e validação;
+- Proteção por omissão, "fail closed", se o sistema falhar impõe um nível de proteção conservador;
+- Desenho aberto, 
+
+### 3.2 - Controlo de Acessos
