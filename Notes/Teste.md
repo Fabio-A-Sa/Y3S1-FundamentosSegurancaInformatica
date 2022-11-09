@@ -147,6 +147,8 @@ Um superuser tem o poder de criar processos, baixar e elevar as suas permissões
 - `Air Gap`, o código malicioso não afeta o sistema, pois este está desligado devido ao hardware. No entanto é difícil de gerir;
 - `Máquinas virtuais`, o hypervisor permite partilha de hardware. Existe o tipo 1, usado nas clouds que contém um SO fino sobre o hardware, ou tipo 2, usado nos computadores pessoais que contém uma camada de software sobre o SO;
 - `Software Fault Isolation (SFI)`, para isolamento de processos que partilham o mesmo espaço de endereçamento, como o isolamento de memória de endereçamento;
-- `System Call Interposition (SCI)`, para monitorização de pontos de acesso a operações priveligiados, como a separação do user-mode do kernel mode, operações de jump/load/store;
+- `System Call Interposition (SCI)`, para monitorização de pontos de acesso a operações previligiados, como a separação do user-mode do kernel mode, operações de jump/load/store;
+    - `ptrace`, system call antes de cada system call. Monitoriza e aborta a operação caso o processo não tenha autorização a determinados recursos. Desvantagens: cada subprocesso tinha de ter outro monitor, o que era limitativo, e é vulnerável a race condition attacks.
+    - `seccomp`, secure computing mode, o processo quando chama **prctl** só pode retornar ou utilizar ficheiros já abertos e uma violação da regra leva o Kernel a abortar o processo. Com **bpf - berkeley packet filter** é possível configurar melhor a utilização das systems calls do processo em modo seguro. 
 - `Sandboxing`, confinamento dentro da própria aplicação, como os browsers em relação ao javascript;
 - `Containers`, partilham o kernel do sistema operativo e isolam os componentes em user mode. Isto implica ter menos recursos disponíveis;
