@@ -1,12 +1,12 @@
 # 6 - Criptografia
 
-Área multidisciplinar com princípios rigorosos e que obedece a normas internacionais, para proteção da confidencialidade, autenticidade/integridade e não-repúdio. Está presente em todas as aplicações quotidianas. A proteção da segurança da informação pode ser:
+Área multidisciplinar com princípios rigorosos e que obedece a normas internacionais, para proteção da confidencialidade, autenticidade/integridade e não-repúdio. Está presente em todas as aplicações quotidianas através da utilização de funções **one way**. A proteção da segurança da informação pode ser:
 - Em trânsito: síncrona, em tempo real como o HTTPs, ou assíncrona, como o email, wtp;
 - Em repouso: criptografia de discos, cloud;
 
 ## Cifras simétricas
 
-Mecanismo público que tem dois algoritmos: E (encrypt) e D (decrypt). Existe uma chave secreta normalmente de 128 bits / 16 bytes, que é aleatória e só os vértices da comunicação é que conhecem. As chaves são de 128 bits pois já dá garantias de segurança (2^128 possibilidades) e é mais económico. 
+Mecanismo público que tem dois algoritmos: E (encrypt, K, N, M) e D (decrypt, K, N, C). Existe uma chave secreta normalmente de 128 bits / 16 bytes, que é aleatória e só os vértices da comunicação é que conhecem. As chaves são de 128 bits pois já dá garantias de segurança (2^128 possibilidades) e é mais económico. Também existe um n, nouce, que é um parâmetro público que permite que exista reutilização da mesma chave.
 
 ### Casos de uso
 
