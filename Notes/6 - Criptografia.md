@@ -44,13 +44,12 @@ Método inseguro de utilização das cifras de bloco, pois blocos do ficheiro ig
 
 #### Cipher Block Chaining (CBC)
 
-Mais seguro, porém complexo para implementar em hardware, logo é menos eficiente. Para a cifragem de cada bloco existe um parâmetro de input adicional que é:
+Mais seguro, porém complexo para implementar em hardware, logo é menos eficiente. Para a cifragem de cada bloco existe um parâmetro de input adicional que é público e corresponde a:
 - um initialization vector (IV), se o bloco for o primeiro;
 - O output da cifragem do bloco anterior, caso contrário;
 
 #### Counter (CTR)
 
-
+A cifra de blocos recebe a chave K e um input constituido metade por um nouce e outra por um contador iniciado em zero. No final a cifragem é garantida fazendo um XOR entre a mensagem a encriptar e o output da cifra de blocos. É uma aproximação ao One Time Pad.
 
 ## Cifras assimétricas
-
