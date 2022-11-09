@@ -105,6 +105,11 @@ Substitui-se o endereço de retorno por uma função mas antes disso configura-s
 
 - Economia dos mecanismos, para facilitar a implementação, usabilidade e validação;
 - Proteção por omissão, "fail closed", se o sistema falhar impõe um nível de proteção conservador;
-- Desenho aberto, 
+- Desenho aberto, para sabermos que estamos vulneráveis;
+- Privilégio mínimo: cada ator deve ter apenas as permissões mínimas para desempenhar a sua função;
+- Separação de privilégios, a utilização dos recursos deve ser isolada;
+- Mediação completa, definir uma política de proteção para todos os recursos e validar todos os acessos;
 
 ### 3.2 - Controlo de Acessos
+
+Aplica o privilégio mínimo, a mediação completa e a separação de privilégios. 
