@@ -103,13 +103,19 @@ Substitui-se o endereço de retorno por uma função mas antes disso configura-s
 
 ### 3.1 - Princípios fundamentais
 
-- Economia dos mecanismos, para facilitar a implementação, usabilidade e validação;
-- Proteção por omissão, "fail closed", se o sistema falhar impõe um nível de proteção conservador;
-- Desenho aberto, para sabermos que estamos vulneráveis;
-- Privilégio mínimo: cada ator deve ter apenas as permissões mínimas para desempenhar a sua função;
-- Separação de privilégios, a utilização dos recursos deve ser isolada;
-- Mediação completa, definir uma política de proteção para todos os recursos e validar todos os acessos;
+- `Economia de mecanismos`, para facilitar a implementação, usabilidade e validação;
+- `Proteção por omissão`, "fail closed", se o sistema falhar impõe um nível de proteção conservador;
+- `Desenho aberto`, para sabermos que estamos vulneráveis;
+- `Privilégio mínimo`: cada ator deve ter apenas as permissões mínimas para desempenhar a sua função;
+- `Separação de privilégios`, a utilização dos recursos deve ser isolada;
+- `Mediação completa`, definir uma política de proteção para todos os recursos e validar todos os acessos;
 
 ### 3.2 - Controlo de Acessos
 
-Aplica o privilégio mínimo, a mediação completa e a separação de privilégios. 
+Aplica o privilégio mínimo, a mediação completa e a separação de privilégios através da combinação entre atores, recursos e operações. Exemplos:
+
+- `Matriz de acessos`, cada par recurso/ator tem permissões associadas, o que é claro porém extenso de representar;
+- `Lista de controlo de acessos (ACL)`, para cada recurso há uma lista das permissões e atores;
+- `Lista de permissões (capabilities)`, para cada ator há uma lista de operações sobre cada recurso;
+- `Role Based Access Control (RBAC)`, permite separar a gestão de recursos da gestão de atores. Os atores são agrupados em perfis (owner, group, other) e cada perfil tem determinadas permissões sobre o recurso. É exemplo o sistema Unix;
+- `Attribute-based Access Control (ABAC)`, os atores e recursos têm atributos e a matriz de acessos descreve as permissões com base nesses atributos. Para aceder a recurso com atributo A o ator deve possuir atributo B. 
