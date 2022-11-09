@@ -132,6 +132,8 @@ Interface entre os utilizadores e o hardware. Garante isolamento de processos, u
 - Kernel mapping, parte da memória do kernel já está mapeada na memória do processo com permissões diferentes para não ocorrer um page-fault e não ir à memória não volátil;
 - Defesa em profundidade, nem o Kernel pode violar W^X;
 
+O kernel atual já possui **namespaces**, para controloar os recursos visíveis, e **cgroups**, para controlar a quantidade de recursos utilizados por um processo e a sua prioridade.
+
 ### 3.4 - Permissões
 
 Existem três tipos de UIDs:
