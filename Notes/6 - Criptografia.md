@@ -34,7 +34,9 @@ Através de uma *seed* de 128 bits gera uma chave K do tamanho do texto a cifrar
 
 ### Cifras de Bloco
 
-Permitem construir cifras. Dado uma chave aleatória K e um input B de 16 bytes, calcula-se o output. Os outputs do algoritmo não se conseguem distinguir de outputs aleatórios. Como a cifragem é feita por iterações de blocos quadrados de 4 por 4 bytes, podem ser implementadas em hardware, o que as torna mais eficientes.
+Permitem construir cifras. Dado uma chave aleatória K e um input B de 16 bytes, calcula-se o output. Os outputs do algoritmo não se conseguem distinguir de outputs aleatórios. Como a cifragem é feita por iterações de blocos quadrados de 4 por 4 bytes, podem ser implementadas em hardware, o que as torna mais eficientes. Exemplos destes algoritmos:
+- `DES`, Data Encryption Standard, usado até 2000 com blocos de 64 bits e chaves até 56 bits;
+- `AES`, Advanced Encryption Standard, usado desde 2000 com blocos de 128 bits e chaves de 128 até 512 bits;
 
 ## Cifras assimétricas
 
