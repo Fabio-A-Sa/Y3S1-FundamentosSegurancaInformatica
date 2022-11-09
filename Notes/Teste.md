@@ -130,4 +130,11 @@ Interface entre os utilizadores e o hardware. Garante isolamento de processos, u
 - Isolamento entre processos;
 - Kernel mapping, parte da memória do kernel já está mapeada na memória do processo com permissões diferentes para não ocorrer um page-fault e não ir à memória não volátil;
 - Defesa em profundidade, nem o Kernel pode violar W^X;
-- 
+
+### 3.4 - Permissões
+
+Existem três tipos de UIDs:
+1. `Effective User ID`, determina as permissões;
+2. `Real User ID`, utilizador que lançou o processo;
+3. `Saved User ID`: utilizado em transições, lembra sempre o anterior;
+Um superuser tem o poder de criar processos, baixar e elevar as suas permissões usando `setuid`. O `seteuid` apenas altera o EUID. Os outros utilizadores têm o poder de baixar as suas permissões, mudando apenas EUID para RUID ou SUID. 
