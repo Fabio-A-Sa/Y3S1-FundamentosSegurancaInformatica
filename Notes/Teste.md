@@ -146,5 +146,5 @@ Um superuser tem o poder de criar processos, baixar e elevar as suas permissões
 - `Máquinas virtuais`, o hypervisor permite partilha de hardware. Existe o tipo 1, usado nas clouds que contém um SO fino sobre o hardware, ou tipo 2, usado nos computadores pessoais que contém uma camada de software sobre o SO;
 - `Software Fault Isolation (SFI)`, para isolamento de processos que partilham o mesmo espaço de endereçamento, como o isolamento de memória de endereçamento;
 - `System Call Interposition (SCI)`, para monitorização de pontos de acesso a operações priveligiados, como a separação do user-mode do kernel mode, operações de jump/load/store;
-- `Sandboxing`, 
-- `Containers`, 
+- `Sandboxing`, confinamento dentro da própria aplicação, como os browsers em relação ao javascript;
+- `Containers`, partilham o kernel do sistema operativo e isolam os componentes em user mode. Isto implica ter menos recursos disponíveis;
