@@ -93,3 +93,5 @@ Substitui-se o endereço de retorno por uma função mas antes disso configura-s
 - kBouncer, que verifica rets precedidos de calls, evita ROP no entanto está limitado a 16 execuções e é apenas para system calls;
 - Stack Canaries, com caracteres difíceis de escrever nas shell codes. Podem ser atacados com brute force ou sair sem retornar para a função anterior;
 - Memory tagging, liga os apontadores às regiões onde apontam através de uma tag de 4 bits que só pode ser manipulada com novas instruções;
+- Control Flow Integrity CFI, identifica pares origem-destino válidos, como num grafo;
+- Program Safety, usando linguagens tipadas com verificação e validação matemática;
