@@ -16,7 +16,7 @@ Uma chave pode ser usada muitas vezes (*many-time key*). Como a cifra de disco, 
 
 ### One Time Pad
 
-Inventado por Vernam em 1917. Cifra-se usando um XOR entre a mensagem com uma chave k de bits que não se volta a repetir. Para descriptografar, usa-se uma propriedade do XOR: c XOR k = m XOR k XOR k.
+Inventado por Vernam em 1917. Cifra-se usando um XOR entre a mensagem com uma chave k de bits que não se volta a repetir. Para descriptografar, usa-se uma propriedade do XOR: c XOR k.
 
 #### Vantagens:
 
@@ -25,8 +25,16 @@ Inventado por Vernam em 1917. Cifra-se usando um XOR entre a mensagem com uma ch
 
 #### Desvantagens:
 
-- A chave k é do tamanho do texto a cifrar;
+- A chave k é do tamanho do texto a cifrar, e como não pode ser repetida acaba por ser computacionalmente difícil transmitir e/ou criar;
 - A chave é usada apenas uma vez;
+
+#### Gerador Pseudo-Aleatório (PRG)
+
+Através de uma *seed* de 128 bits gera uma chave K do tamanho do texto a cifrar. No entanto isto não é seguro pois é determinístico: ao usar a mesma seed, gera a mesma chave. Solução: nos PRGs modernos, além da seed colocar o valor do nouce público.
+
+### Cifras de Bloco
+
+Permitem construir cifras. Dado uma chave aleatória K e um input B de 16 bytes, calcula-se o output. Os outputs do algoritmo não se conseguem distinguir de outputs aleatórios. Como a cifragem é feita por iterações de blocos quadrados de 4 por 4 bytes, podem ser implementadas em hardware, o que as torna mais eficientes.
 
 ## Cifras assimétricas
 
