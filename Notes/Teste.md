@@ -152,3 +152,8 @@ Um superuser tem o poder de criar processos, baixar e elevar as suas permissões
     - `seccomp`, secure computing mode, o processo quando chama **prctl** só pode retornar ou utilizar ficheiros já abertos e uma violação da regra leva o Kernel a abortar o processo. Com **bpf - berkeley packet filter** é possível configurar melhor a utilização das systems calls do processo em modo seguro. 
 - `Sandboxing`, confinamento dentro da própria aplicação, como os browsers em relação ao javascript;
 - `Containers`, partilham o kernel do sistema operativo e isolam os componentes em user mode. Isto implica ter menos recursos disponíveis;
+
+Um software pode detectar que está a correr numa máquina virtual:
+- Instruções disponíveis;
+- Latência no acesso à memória cache;
+- O hypervisor utiliza parte dos mecanismos de gestão do HW pelo que pode detectar a limitação de recursos;
