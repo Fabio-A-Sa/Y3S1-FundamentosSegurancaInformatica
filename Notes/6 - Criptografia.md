@@ -38,5 +38,11 @@ Permitem construir cifras. Dado uma chave aleatória K e um input B de 16 bytes,
 - `DES`, Data Encryption Standard, usado até 2000 com blocos de 64 bits e chaves até 56 bits;
 - `AES`, Advanced Encryption Standard, usado desde 2000 com blocos de 128 bits e chaves de 128 até 512 bits;
 
+#### Eletronic Code Book
+
+Método inseguro de utilização das cifras de bloco, pois blocos do ficheiro iguais geral blocos do criptograma igmais.
+
+#### 
+
 ## Cifras assimétricas
 
