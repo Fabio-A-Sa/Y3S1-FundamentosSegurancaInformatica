@@ -201,3 +201,10 @@ A prevenção é criar um CSRF token para em forms críticos/com side-effects.
 #### 4.4.2 - Insecure Direct Object Reference (IDOR)
 
 Quando não há controlo de acessos ou quando estes são limitados. 
+
+#### 4.4.3 - SQL Injection
+
+Acontecem quando o input não é validado e não há uma separação clara entre os dados e o tratamento dos mesmos pelo sistema. Devemos sanitizar os inputs. Os inputs não devem ser parte do comando mas sim parâmetros injectados em formato de texto. Nunca criar comandos SQL dinamicamente como strings.
+
+#### 4.4.4 - Cross-Site Scripting (XSS)
+
