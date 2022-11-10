@@ -185,7 +185,7 @@ Modelo de segurança que só deixa frames comunicarem entre si se tiverem a mesm
 A resposta de qualquer origem é processada, criação de frame e javascript dessa origem, mas não pode haver manipulação dessa informação por parte de outro script.
 
 **Para cookies:**<br>
-
+A definição de origem é diferente: é apenas o domínio e path. Aqui as cookies são enviadas quando o seu domínio for um sufixo do domínio da URL e se a sua path for um prefixo da path do URL. Para os novos sites, se SameSite=None, então enviam as cookies de qualquer forma.
 
 ### 4.3 - Cross-Origin Resource Sharing (CORS)
 
