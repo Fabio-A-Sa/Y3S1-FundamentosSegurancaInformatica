@@ -192,3 +192,9 @@ A definição de origem é diferente: é apenas o domínio e path. Aqui as cooki
 Permite relaxar o SOP. O servidor permite ao Browser recolher também os recursos de outros servidores através de flags aquando dos pedidos. Podem existir pedidos simples, em que a permissão vem no protocolo HTML, ou pre-flighted, quando existe um primeiro pedido dummy que vai verificar se é possível um servidor externo X dar o recurso solicitado.
 
 ### 4.4 - Ataques
+
+#### 4.4.1 - Cross Site Request Forgery (CSRF)
+
+Quando há usurpação de cookies (*session hijacking*) pedidos com side-effects podem ser efetuados. `XS-Leaks` é algo semelhante, requests em nome do utilizador onde são monitorizados os erros e contando os frames para extrair informação.
+
+#### 4.4.2 - 
