@@ -165,11 +165,21 @@ Um software pode detectar que está a correr numa máquina virtual:
 
 ## 4. Segurança da Web
 
+Atualmente podemos ter atacantes no browser (injecta malware no browser), atacantes externos (controla o meio de comunicação), atacantes internos (controla o servidor, uma página do cliente ou um componente da página).
+
 ### 4.1 - Protocolo HTTP
 
-
+Protocolo sem estado que tem vários pedidos disponíveis, de entre os quais:
+- GET, obter recurso sem side-effects;
+- POST, criar um novo recurso com side-effects;
+- PATCH, alterar parte do recurso;
+- PUT, substituir recurso;
+- DELETE, remover recurso;
+A resposta tem um status code, headers e pode ou não ter body, com HTML ou JSON.
 
 ### 4.2 - SOP
+
+Modelo de segurança.
 
 ### 4.3 - CORS
 
