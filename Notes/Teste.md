@@ -177,10 +177,16 @@ Protocolo sem estado que tem vários pedidos disponíveis, de entre os quais:
 - DELETE, remover recurso;
 A resposta tem um status code, headers e pode ou não ter body, com HTML ou JSON.
 
-### 4.2 - SOP
+### 4.2 - Same Origin Policy (SOP)
 
-Modelo de segurança.
+Modelo de segurança que só deixa frames comunicarem entre si se tiverem a mesma origem (esquema, nome de domínio e porta). 
 
-### 4.3 - CORS
+**Para pedidos ao servidor:**<br>
+A resposta de qualquer origem é processada, criação de frame e javascript dessa origem, mas não pode haver manipulação dessa informação por parte de outro script.
+
+**Para cookies:**<br>
+
+
+### 4.3 - Cross-Origin Resource Sharing (CORS)
 
 ### 4.4 - Ataques
