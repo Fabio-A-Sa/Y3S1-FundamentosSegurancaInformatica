@@ -87,8 +87,8 @@ Sanitizar os inputs. Os inputs não devem ser parte do comando mas sim parâmetr
 
 Ignora o SOP, pois quem corre o código malicioso é o próprio cliente. O atacante consegue convencer o cliente a correr código malicioso no seu browser para um site legítimo, para que este possa ver a resposta. Existem dois tipos de XSS:
 
-- Reflected, quando a máquina da pessoa atacada serve de meio para retirar informação dos servidores;
-- Stored, quando o ataque é permanente, colocado no servidor ou base de dados;
+- `Reflected`, quando a máquina da pessoa atacada serve de meio para retirar informação dos servidores;
+- `Stored`, quando o ataque é permanente, colocado no servidor ou base de dados;
 
 Uma forma de prevenção de XSS é sempre validar os inputs, headers, cookies. Os mecanismos proporcionados por frameworks ainda são incompletos. Outra solução é usar Content Security Policy (CSP) para o site permitir ou não execução de scripts, dos seus próprios scripts ou de scripts que estejam numa white-list. 
 
