@@ -164,3 +164,13 @@ Um software pode detectar que está a correr numa máquina virtual:
 - O hypervisor utiliza parte dos mecanismos de gestão do HW pelo que pode detectar a limitação de recursos;
 
 ## 4. Segurança da Web
+
+### 4.1 - Protocolo HTTP
+
+
+
+### 4.2 - SOP
+
+### 4.3 - CORS
+
+### 4.4 - Ataques
