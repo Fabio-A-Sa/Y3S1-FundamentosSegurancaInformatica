@@ -21,7 +21,10 @@
     - Permissões;
     - Confinamento;
 4. Segurança da Web:
-    - 
+    - Protocolo HTTP;
+    - SOP;
+    - CORS;
+    - Ataques;
 
 ## 1. Introdução
 
