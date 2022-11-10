@@ -195,6 +195,9 @@ Permite relaxar o SOP. O servidor permite ao Browser recolher também os recurso
 
 #### 4.4.1 - Cross Site Request Forgery (CSRF)
 
-Quando há usurpação de cookies (*session hijacking*) pedidos com side-effects podem ser efetuados. `XS-Leaks` é algo semelhante, requests em nome do utilizador onde são monitorizados os erros e contando os frames para extrair informação.
+Quando há usurpação de cookies (*session hijacking*) pedidos com side-effects podem ser efetuados. `XS-Leaks` é algo semelhante, requests em nome do utilizador onde são monitorizados os erros e contando os frames para extrair informação. <br>
+A prevenção é criar um CSRF token para em forms críticos/com side-effects.
 
-#### 4.4.2 - 
+#### 4.4.2 - Insecure Direct Object Reference (IDOR)
+
+Quando não há controlo de acessos ou quando estes são limitados. 
