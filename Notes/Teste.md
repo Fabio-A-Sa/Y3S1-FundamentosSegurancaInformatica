@@ -208,3 +208,16 @@ Acontecem quando o input não é validado e não há uma separação clara entre
 
 #### 4.4.4 - Cross-Site Scripting (XSS)
 
+Injeção de código por parte do cliente:
+- `reflected`, quando a máquina da pessoa atacada serve de meio para retirar informação dos servidores;
+- `stored`, quando o ataque é permanente, colocado no servidor ou base de dados;
+
+É importante validar os inputs, ou fazer CSP (*content security policy*), que garante que scripts in-line não são executados, a menos que estejam na white-list.
+
+#### 4.4.5 - Security Misconfiguration
+
+O utilizar vê um frame do site alvo mas a interação é com o site malicioso
+
+#### 4.4.6 - Insecure Design
+
+O cliente não pode confiar no servidor (XSS, por exemplo, ou armazenamento das credienciais dos utilizadores de forma insegura), e o servidor não pode confiar no cliente (inputs inválidos, inputs negativos, gerar mensagens de erros com informação sensível, como versões ou logs).
