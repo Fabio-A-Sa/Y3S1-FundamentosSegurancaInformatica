@@ -189,4 +189,6 @@ A definição de origem é diferente: é apenas o domínio e path. Aqui as cooki
 
 ### 4.3 - Cross-Origin Resource Sharing (CORS)
 
+Permite relaxar o SOP. O servidor permite ao Browser recolher também os recursos de outros servidores através de flags aquando dos pedidos. Podem existir pedidos simples, em que a permissão vem no protocolo HTML, ou pre-flighted, quando existe um primeiro pedido dummy que vai verificar se é possível um servidor externo X dar o recurso solicitado.
+
 ### 4.4 - Ataques
