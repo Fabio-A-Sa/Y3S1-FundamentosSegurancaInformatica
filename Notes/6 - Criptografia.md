@@ -6,7 +6,8 @@
 
 ## Cifras simétricas
 
-Mecanismo público que tem dois algoritmos: E (encrypt, K, N, M) e D (decrypt, K, N, C). Existe uma chave secreta normalmente de 128 bits / 16 bytes, que é aleatória e só os vértices da comunicação é que conhecem. As chaves são de 128 bits pois já dá garantias de segurança (2^128 possibilidades) e é mais económico. Também existe um n, nouce, que é um parâmetro público que permite que exista reutilização da mesma chave.
+Mecanismo público que tem dois algoritmos: E (encrypt, K, N, M) e D (decrypt, K, N, C). Existe uma chave secreta normalmente de 128 bits / 16 bytes, que é aleatória e só os vértices da comunicação é que conhecem. As chaves são de 128 bits pois já dá garantias de segurança (2^128 possibilidades) e é mais económico. Também existe um n, nouce, que é um parâmetro público que permite que exista reutilização da mesma chave. <br>
+Garante a confidencialidade mas não garante integridade/autenticidade em ataques ativos, pois o atacante pode mudar os bits da chave (*bit flip*) e usurpar a mensagem original transmitida.
 
 ### Casos de uso
 
@@ -52,4 +53,22 @@ Mais seguro, porém complexo para implementar em hardware, logo é menos eficien
 
 A cifra de blocos recebe a chave K e um input constituido metade por um nouce e outra por um contador iniciado em zero. No final a cifragem é garantida fazendo um XOR entre a mensagem a encriptar e o output da cifra de blocos. É uma aproximação ao One Time Pad.
 
-## Cifras assimétricas
+## Message Authentication Codes MAC
+
+É um algoritmo público e standard. As chaves continuam a ser de 128 bits e existem tags de dimensão pequena (256 bits). As mensagens são públicas. Na recepção da mensagem recalcula-se a tag com a mesma chave e verifica-se se é a mesma. Garante autenticidade e integridade.<br>
+MAC não permite detectar se a mensagem e a tag não forem enviadas ou se forem enviadas várias vezes (pode comprometer a ordem dos valores/inputs). É necessário transmitir apenas uma vez e com recurso a número de sequência.
+
+### Construção de MACs
+
+#### HMAC
+
+Construção de um MAC a partir de uma função de Hash. 
+Tag = Hash (OKEY, Hash (IKEY, message)), com OKEY = KEY and ConstO, IKEY = KEY and ConstI.
+
+#### Poly1305
+
+Um polinómio é definido por m e avaliado no ponto r. No final adicionar uma constante s. 
+Tag = f (m, r) + s
+
+## Confidencialidade e Autenticidade
+
