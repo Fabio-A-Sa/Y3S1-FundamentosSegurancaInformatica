@@ -33,7 +33,7 @@ r.sendline(b"xxxxxxxxxxxxxxxxxxxxflag.txt")
 
 Ao executar conseguimos ter acesso ao conteúdo do ficheiro `flag.txt` e à flag do desafio, `flag{2c6fc4e1126713be0d33799a0827a981}`.
 
-![Buffer overflow](../img/ctf2task1.png)
+![Buffer overflow](../../Images/ctf2task1.png)
 
 ## Segunda parte
 
@@ -51,7 +51,7 @@ Verificamos que a técnica a usar é semelhante ao desafio anterior, no entanto 
 
 O ouput inicial do programa é sempre o mesmo e revela o valor inicial de `val` declarado:
 
-![Output](../img/ctf2task2a.png)
+![Output](../../Images/ctf2task2a.png)
 
 Com essa informação pudemos reconstruir os bytes que deveriam constar em `val` para este ser igual a 0xfefc2223.
 
@@ -68,4 +68,4 @@ r.sendline(b"xxxxxxxxxxxxxxxxxxxx\x23\x22\xfc\xfeflag.txt")
 
 Ao executar conseguimos ter acesso ao conteúdo do ficheiro `flag.txt` e à flag do desafio, `flag{9b9af7659b2188312cd6f82ca492f09e}`.
 
-![Buffer overflow](../img/ctf2task2b.png)
+![Buffer overflow](../../Images/ctf2task2b.png)

@@ -10,7 +10,7 @@
 
  ### Task 2
 > Guardando em dois ficheiros diferentes as variáveis de ambiente do processos pai (parentenv.txt) e filho (childenv.txt), ao fazer a diferença entre os 2, o resultado é vazio: <br>
-> ![](../img/lab4task2.png) <br>
+> ![](../../Images/lab4task2.png) <br>
 > Assim, conclui-se que todas as variáveis de ambiente do processo pai são heredadas pelo filho após o fork(), ou seja, não há diferença no ambiente de execução. <br>
 
 
