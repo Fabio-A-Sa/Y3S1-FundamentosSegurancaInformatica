@@ -81,3 +81,9 @@ Existem três hipóteses principais para combinar a confidencialidade e a autent
 - Encrypt and Mac, usado no SSH, calcula o criptograma e o MAC sobre a mesma mensagem e envia em separado;
 - Mac then Encrypt, usado no SSL, calcula o criptograma de (mensagem + MAC da mensagem);
 - Encrypt then Mac, usado no IPSEC, calcula o criptograma da mensagem e calcula o MAC do criptograma e envia os dois em separado;
+
+A melhor solução é a usada no IPSEC, pois só começa a decifrar quando o MAC corresponde. No caso do SSL haveria dados possivelmente manipulados e maliciosos em memória antes da verificação.
+
+## Authenticated Encryption with Associated Data (AEAD)
+
+Abstração da implementação de um canal seguro com criptograma simétrico. Garante a confidencialidade da mensagem, a autenticidade do criptograma e a autenticidade dos metadados. O algoritmo mais usado no mundo é o AES-GCM (Galois-Counter-Mode).
