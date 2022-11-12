@@ -53,6 +53,10 @@ Mais seguro, porém complexo para implementar em hardware, logo é menos eficien
 
 A cifra de blocos recebe a chave K e um input constituido metade por um nouce e outra por um contador iniciado em zero. No final a cifragem é garantida fazendo um XOR entre a mensagem a encriptar e o output da cifra de blocos. É uma aproximação ao One Time Pad.
 
+#### ChaCha20
+
+Mais eficiente do que o AES em implementações de software. É uma cifra sequencial com nonce e com um gerador pseudo-aleatório dedicado.
+
 ## Message Authentication Codes MAC
 
 É um algoritmo público e standard. As chaves continuam a ser de 128 bits e existem tags de dimensão pequena (256 bits). As mensagens são públicas. Na recepção da mensagem recalcula-se a tag com a mesma chave e verifica-se se é a mesma. Garante autenticidade e integridade.<br>
