@@ -87,3 +87,12 @@ A melhor solução é a usada no IPSEC, pois só começa a decifrar quando o MAC
 ## Authenticated Encryption with Associated Data (AEAD)
 
 Abstração da implementação de um canal seguro com criptograma simétrico. Garante a confidencialidade da mensagem, a autenticidade do criptograma e a autenticidade dos metadados. O algoritmo mais usado no mundo é o AES-GCM (Galois-Counter-Mode).
+
+## Aleatoriedade
+
+Atingir a aleatoriedade é difícil. Por isso os mecanismos dos sistemas operativos usam um hash das suas fontes de entropia (fenómenos físicos como medição de temperatura, atividade do utilizador, strings, floats, bautrate). Sempre que há pedido de aleatoriedade nova, existe uma atualização do estado da *entropy pool* e há dois processos em Linux nesse sentido:
+
+- `/dev/urandom`, non-blocking, fornece dados simples;
+- `/dev/random`, blocking, só fornece dados aleatórios se atingir um patamar seguro de entropia;
+
+O mais seguro é o non-blocking. O blocking é menos recomendado porque por um lado não há garantias da correcta medição da entropia por parte do sistema e por outro, como nem sempre tem dados para enviar, acaba por retornar algumas vezes nulo, que não é um dado aleatório.
