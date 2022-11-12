@@ -67,7 +67,7 @@ MAC não permite detectar se a mensagem e a tag não forem enviadas ou se forem 
 #### HMAC
 
 Construção de um MAC a partir de uma função de Hash. 
-Tag = Hash (OKEY, Hash (IKEY, message)), com OKEY = KEY and ConstO, IKEY = KEY and ConstI.
+Tag = Hash (OKEY, Hash (IKEY, message)), com OKEY = KEY XOR ConstO, IKEY = KEY XOR ConstI.
 
 #### Poly1305
 
@@ -76,3 +76,8 @@ Tag = f (m, r) + s
 
 ## Confidencialidade e Autenticidade
 
+Existem três hipóteses principais para combinar a confidencialidade e a autenticidade:
+
+- Encrypt and Mac, usado no SSH, calcula o criptograma e o MAC sobre a mesma mensagem e envia em separado;
+- Mac then Encrypt, usado no SSL, calcula o criptograma de (mensagem + MAC da mensagem);
+- Encrypt then Mac, usado no IPSEC, calcula o criptograma da mensagem e calcula o MAC do criptograma e envia os dois em separado;
