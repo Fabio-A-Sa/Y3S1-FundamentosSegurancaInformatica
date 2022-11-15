@@ -101,13 +101,15 @@ O mais seguro é o non-blocking. O blocking é menos recomendado porque por um l
 
 Com criptografia simétrica, para N agentes de comunicação é necessário partilhar na ordem de N^2 chaves, o que provoca uma distribuição manual de chaves pouco prática e dificuldades a adicionar um novo agente à rede.
 
-Antigamente, para sistemas fechados, utilizava-se um KDC (*Key Distribution Center*) que armazena uma chave de longa duração partilhada com cada agente. Assim é só necessário N chaves para N agentes. No entanto o KDC está sempre online, o que constitui uma grande falha. #TODO
+Antigamente, para sistemas fechados, utilizava-se um KDC (*Key Distribution Center*) que armazena uma chave de longa duração partilhada por cada agente para aceder à rede. Assim é só necessário N chaves para N agentes. No entanto o KDC está sempre online, o que constitui um ponto central de falha.
 
 ### Limitações com a criptografia simétrica
 
 Sempre que é possível, usar criptografia simétrica, pois poupa recursos (economia de mecanismos). Por outro lado, não é possível existir chaves simétricas de longa duração. 
 
-## Cifras de chave pública / Criptografia assimétrica
+## Criptografia assimétrica
+
+## Cifras de chave pública 
 
 Para comunicações unidirecionais. Existem duas chaves (uma pública, que serve para cifrar, e uma privada, para decifrar). Os algoritmos usados são públicos.
 
@@ -117,12 +119,15 @@ São muito mais ineficientes do que as cifras simétricas, pois podem ter milhar
 - C2 = AEAD(ks, M), M = mensagem a encriptar
 - O receptor recupera KS a partir de C1 e da sua chave privada, e recupera M a partir de KS. 
 
-### Construção de cifras de chave pública
+### Construção de cifras de chave pública 
 
-Através do mecanismo de OAEP. #TODO
-A função de chave pública é RSA. Usa-se dois números primos grandes e secretos e um expoente comum, 0x10001. 
+Através do mecanismo de OAEP. Existe uma função F que codifica M com uma chave pública mas o inverso só é possível com input e chave privada. O input tem de ser cifrado antes (ou seja, aleatoriedade), pois caso contrário pode haver comparações de input e descobrir mesmo sem a chave privada a mensagem.
+A função de chave pública (F) é RSA atualmente. Usa-se dois números primos grandes e secretos e um expoente comum, 0x10001. 
 
 ## Assinaturas Digitais
 
-Uma entidade usa uma chave de assinatura para codificar a mensagem e envia a cifra com a tag. Qualquer outra entidade pode decifrar, usando a sua chave privada e a tag resultante. Consegue provar a autenticidade das mensagens trocadas.
+Uma entidade usa uma `chave de assinatura` (chave secreta) para codificar a mensagem e envia a cifra com a tag. Qualquer outra entidade pode decifrar, usando uma `chave de verificação` (chave pública) e a tag resultante. Consegue provar a autenticidade das mensagens trocadas. Isto assume que a chave de verificação veio da entidade que estamos a tentar verificar. 
 
+## Envelopes digitais
+
+Permite combinar cifras assimétricas com assinaturas digitais, garantindo a autenticidade, integridade e não repúdio. A mensagem é assinada e só depois cifrada, para ninguém alegar que assinou um criptograma sem conhecer o seu conteúdo.
