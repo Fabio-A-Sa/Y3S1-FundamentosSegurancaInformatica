@@ -96,3 +96,33 @@ Atingir a aleatoriedade é difícil. Por isso os mecanismos dos sistemas operati
 - `/dev/random`, blocking, só fornece dados aleatórios se atingir um patamar seguro de entropia;
 
 O mais seguro é o non-blocking. O blocking é menos recomendado porque por um lado não há garantias da correcta medição da entropia por parte do sistema e por outro, como nem sempre tem dados para enviar, acaba por retornar algumas vezes nulo, que não é um dado aleatório.
+
+## Gestão de Chaves
+
+Com criptografia simétrica, para N agentes de comunicação é necessário partilhar na ordem de N^2 chaves, o que provoca uma distribuição manual de chaves pouco prática e dificuldades a adicionar um novo agente à rede.
+
+Antigamente, para sistemas fechados, utilizava-se um KDC (*Key Distribution Center*) que armazena uma chave de longa duração partilhada com cada agente. Assim é só necessário N chaves para N agentes. No entanto o KDC está sempre online, o que constitui uma grande falha. #TODO
+
+### Limitações com a criptografia simétrica
+
+Sempre que é possível, usar criptografia simétrica, pois poupa recursos (economia de mecanismos). Por outro lado, não é possível existir chaves simétricas de longa duração. 
+
+## Cifras de chave pública / Criptografia assimétrica
+
+Para comunicações unidirecionais. Existem duas chaves (uma pública, que serve para cifrar, e uma privada, para decifrar). Os algoritmos usados são públicos.
+
+São muito mais ineficientes do que as cifras simétricas, pois podem ter milhares de bits ao contrário dos anteriores 128. Para ser mais eficiente o emissor cifra:
+
+- C1 = ENC(pk, ks), ks = chave de sessão, pk = chave pública do receptor
+- C2 = AEAD(ks, M), M = mensagem a encriptar
+- O receptor recupera KS a partir de C1 e da sua chave privada, e recupera M a partir de KS. 
+
+### Construção de cifras de chave pública
+
+Através do mecanismo de OAEP. #TODO
+A função de chave pública é RSA. Usa-se dois números primos grandes e secretos e um expoente comum, 0x10001. 
+
+## Assinaturas Digitais
+
+Uma entidade usa uma chave de assinatura para codificar a mensagem e envia a cifra com a tag. Qualquer outra entidade pode decifrar, usando a sua chave privada e a tag resultante. Consegue provar a autenticidade das mensagens trocadas.
+
