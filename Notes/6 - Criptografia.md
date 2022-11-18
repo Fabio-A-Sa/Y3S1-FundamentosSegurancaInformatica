@@ -130,4 +130,18 @@ Uma entidade usa uma `chave de assinatura` (chave secreta) para codificar a mens
 
 ## Envelopes digitais
 
-Permite combinar cifras assimétricas com assinaturas digitais, garantindo a autenticidade, integridade e não repúdio. A mensagem é assinada e só depois cifrada, para ninguém alegar que assinou um criptograma sem conhecer o seu conteúdo.
+Permite combinar cifras assimétricas com assinaturas digitais, garantindo a autenticidade, integridade e não repúdio. A mensagem é assinada e só depois cifrada, para ninguém alegar que assinou um criptograma sem conhecer o seu conteúdo.<br>
+Para garantir o não repúdio, é necessário que na mensagem exista indicação de quem é o destinatário.
+
+## Acordo de Chaves
+
+#TODO
+
+### Protocolo Diffie-Hellman
+
+Utilização de curvas elíticas pois é mais eficiente. Cada elemento da comunicação calcula um valor aleatório x e manda G^x. Do outro lado, a chave resultante que vai ser usada na troca de mensagens é (G^x)^y. <br>
+Este protocolo está vulnerável a *Man in the Middle Attack*: não há qualquer identificação dos utilizadores em comunicação, pelo que é possível trocar a origem. 
+
+### Protocolo Diffie-Hellman Autenticado
+
+Semelhante ao anterior, mas cada G^x e G^y estão autenticados. Antes da criação de chaves, há verificação da autenticidade da mensagem. #TODO
