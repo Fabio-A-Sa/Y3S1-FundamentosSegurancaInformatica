@@ -131,11 +131,11 @@ Uma entidade usa uma `chave de assinatura` (chave secreta) para codificar a mens
 ## Envelopes digitais
 
 Permite combinar cifras assimétricas com assinaturas digitais, garantindo a autenticidade, integridade e não repúdio. A mensagem é assinada e só depois cifrada, para ninguém alegar que assinou um criptograma sem conhecer o seu conteúdo.<br>
-Para garantir o não repúdio, é necessário que na mensagem exista indicação de quem é o destinatário.
+Para garantir o não repúdio, é necessário também que na mensagem exista indicação de quem é o destinatário.
 
 ## Acordo de Chaves
 
-#TODO
+Garantem o *perfect forward secrecy*, ou seja, comprometer chaves de longa duração não compromete chaves de sessões passadas. 
 
 ### Protocolo Diffie-Hellman
 
@@ -144,4 +144,4 @@ Este protocolo está vulnerável a *Man in the Middle Attack*: não há qualquer
 
 ### Protocolo Diffie-Hellman Autenticado
 
-Semelhante ao anterior, mas cada G^x e G^y estão autenticados. Antes da criação de chaves, há verificação da autenticidade da mensagem. #TODO
+Semelhante ao anterior, mas cada G^x e G^y estão autenticados. Durante a criação das chaves há verificação da autenticidade da mensagem através da chave pública de ambos.
