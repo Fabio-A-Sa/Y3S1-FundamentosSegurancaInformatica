@@ -8,8 +8,8 @@
 
 ## Certificados de Chave pública
 
-Uma pessoa prova a uma autoridade de certificação (AC) que possui uma chave privada, através da assinatura de um pedido de certificado que contém uma chave privada usando a chave secreta ou porque a AC dá a própria chave privada.
-Documento codificado com regras ASN (*Abstract Syntax Notation*) e DER (*Distinguished Encoding Rules*).
+Uma pessoa prova a uma autoridade de certificação (AC) que possui uma chave privada, através da assinatura de um pedido de certificado que contém uma chave privada usando a chave secreta ou porque a AC dá a própria chave privada. Depois a AC gera um documento eletrónico com toda a informação recolhida (tanto da origem como da própria máquina), e a validade para limitar a duração da responsabilização do contrato.
+Esse documento é codificado com regras ASN1 (*Abstract Syntax Notation*) e DER (*Distinguished Encoding Rules*).
 
 O titular da chave pública guarda o seu próprio certificado.
 
