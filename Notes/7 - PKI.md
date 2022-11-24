@@ -9,6 +9,13 @@
 ## Certificados de Chave pública
 
 Uma pessoa prova a uma autoridade de certificação (AC) que possui uma chave privada, através da assinatura de um pedido de certificado que contém uma chave privada usando a chave secreta ou porque a AC dá a própria chave privada. Depois a AC gera um documento eletrónico com toda a informação recolhida (tanto da origem como da própria máquina), e a validade para limitar a duração da responsabilização do contrato.
-Esse documento é codificado com regras ASN1 (*Abstract Syntax Notation*) e DER (*Distinguished Encoding Rules*). Contém identificadores de objecto (OI) e extensões (críticas ou não críticas). Se forem críticas, então 
+Esse documento é codificado com regras ASN1 (*Abstract Syntax Notation*) e DER (*Distinguished Encoding Rules*). Contém identificadores de objecto (OI) e extensões (críticas ou não críticas). 
+
+### Enxtensões de certificados
+
+- Critical, se não conseguir identificar o que significa então devemos rejeitar o certificado;
+- Subject/Authority key identifier, com hash da chave pública do CA;
+- Basic constraints, flag que assinala certificados como pertencentes ao CA;
+- Key usage, a própria CA pode restringir a utilização do certificado;
 
 O titular da chave pública guarda o seu próprio certificado, o que permite enviá-lo até por canais inseguros para o destinatário e assim reduz a dependência da CA (pode inclusive estar offline no processo). O destinatário pode verificar a correção da identidade, a validade e a meta-informação. Mas continua sem saber como verificar se a CA é de confiança nem a obter a chave pública da CA. 
