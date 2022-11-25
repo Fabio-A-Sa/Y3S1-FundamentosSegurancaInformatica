@@ -19,3 +19,15 @@ Esse documento é codificado com regras ASN1 (*Abstract Syntax Notation*) e DER 
 - Key usage, a própria CA pode restringir a utilização do certificado;
 
 O titular da chave pública guarda o seu próprio certificado, o que permite enviá-lo até por canais inseguros para o destinatário e assim reduz a dependência da CA (pode inclusive estar offline no processo). O destinatário pode verificar a correção da identidade, a validade e a meta-informação. Mas continua sem saber como verificar se a CA é de confiança nem a obter a chave pública da CA. 
+
+## Public-Key Infrastructure
+
+- `Normas técnicas`, que algoritmos e formatos utilizar;
+- `Regulamentação`, como deve ser utilizadas as normas técnicas e responsabilidade/direitos dos participantes;
+- `Leis`, garantias formais e penalizações em caso de violação das regras;
+
+Há uma confiança implícita nos Certificados CA, pois são normalmente dados pelo próprio sistema operativo (ou seja, por canal seguro). Nada é mais confiável do que o *root CA*.
+
+### Revogação de certificados
+
+Através das CRLs (*Certificate Revokation List*) das CAs.
