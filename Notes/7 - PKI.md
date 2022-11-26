@@ -34,11 +34,14 @@ Há uma confiança implícita nos Certificados CA, pois são normalmente dados p
 
 Inicialmente fazia-se através das CRLs (*Certificate Revokation List*) das CAs, que listava os certificados que não eram para ser usados apesar de estarem dentro da validade. Atualmente existem as seguintes soluções:
 
-#### 1 - Trusted Service Provider Lists (TLS):
+#### 1 - Trusted Service Provider Lists (TLS)
 
 É uma white list que é atualizada periodicamente contendo os certificados válidos. É usada para comunidades pequenas, fechadas e de segurança elevada.
 
-2. Online Certificate Status Protocol (OCSP):
-É um servidor seguro gerido pela própria CA que verifica o estado da revogação usada em contextos de organizações governamentais. Implica 
+#### 2 - Online Certificate Status Protocol (OCSP)
 
-3. Certificate pinning:
+É um servidor seguro gerido pela própria CA que verifica o estado da revogação usada em contextos de organizações governamentais. Implica partilha de sites usados, podem existir problemas de privacidade.
+
+#### 3 - Certificate pinning
+
+Empresas ou browsers grandes contém white lists de certificados, que são atualizados com periodicidade fixa. 
