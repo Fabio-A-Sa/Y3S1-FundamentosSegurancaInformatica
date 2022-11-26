@@ -22,12 +22,23 @@ O titular da chave pública guarda o seu próprio certificado, o que permite env
 
 ## Public-Key Infrastructure
 
+Constituída por duas grandes bases: infraestruturas físicas de proteção e muita documentação. A documentação deve conter os seguintes aspectos: 
+
 - `Normas técnicas`, que algoritmos e formatos utilizar;
 - `Regulamentação`, como deve ser utilizadas as normas técnicas e responsabilidade/direitos dos participantes;
 - `Leis`, garantias formais e penalizações em caso de violação das regras;
 
-Há uma confiança implícita nos Certificados CA, pois são normalmente dados pelo próprio sistema operativo (ou seja, por canal seguro). Nada é mais confiável do que o *root CA*.
+Há uma confiança implícita nos Certificados CA, pois são normalmente dados pelo próprio sistema operativo (ou seja, por canal seguro). Nada é mais confiável do que o *root CA*, pois é a que gera as chaves de Certificados mais próximos dos utilizadores finais.
 
 ### Revogação de certificados
 
-Através das CRLs (*Certificate Revokation List*) das CAs.
+Inicialmente fazia-se através das CRLs (*Certificate Revokation List*) das CAs, que listava os certificados que não eram para ser usados apesar de estarem dentro da validade. Atualmente existem as seguintes soluções:
+
+#### 1 - Trusted Service Provider Lists (TLS):
+
+É uma white list que é atualizada periodicamente contendo os certificados válidos. É usada para comunidades pequenas, fechadas e de segurança elevada.
+
+2. Online Certificate Status Protocol (OCSP):
+É um servidor seguro gerido pela própria CA que verifica o estado da revogação usada em contextos de organizações governamentais. Implica 
+
+3. Certificate pinning:
