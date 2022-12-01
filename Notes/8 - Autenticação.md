@@ -20,3 +20,5 @@ Por um lado é uma forma simples de autenticação, mas por outro lado há uma s
 
 ### Armazenamento das Passwords
 
+Não necessitamos de guardar a password explicitamente, só necessitamos de a reconhecer. Nos servidores normalmente grava-se um hash(password) ou pares salt-hash(salt + password). Neste último caso inibe ataques por dicionário, uma vez que as mesmas passwords em diversos sítios darão resultados distintos. <br>
+Para atrasar o brute-force, pode ser necessário usar funções de hash mais lentas, como o *bcrypt*.
