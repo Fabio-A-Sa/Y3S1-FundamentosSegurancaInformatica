@@ -12,3 +12,9 @@ Podem ser usadas individualmente ou em multi-factor. Exemplos:
 
 ## Passwords
 
+Por um lado é uma forma simples de autenticação, mas por outro lado há uma série de problemas associados:
+- A pessoa revela a password a terceiros, diretamente ou por **phishing**;
+- 
+-
+-
+-
