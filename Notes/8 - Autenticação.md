@@ -14,7 +14,9 @@ Podem ser usadas individualmente ou em multi-factor. Exemplos:
 
 Por um lado é uma forma simples de autenticação, mas por outro lado há uma série de problemas associados:
 - A pessoa revela a password a terceiros, diretamente ou por **phishing**;
-- 
--
--
--
+- Ataques a *endpoints*, keyloggers, clipboards;
+- Na rede, ao não usar a ligação TLS;
+- Ataques  ao servidor que contém a base de dados;
+
+### Armazenamento das Passwords
+
