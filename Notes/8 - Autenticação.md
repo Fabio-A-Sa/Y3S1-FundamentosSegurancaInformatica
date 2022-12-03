@@ -34,6 +34,3 @@ Com interface, mas limitada. Gera MACs da hora atual com criptografia simétrica
 ### One-Time Passcode
 
 De utilização mais recente. Consiste no envio de tokens virtuais para um dispositivo próximo à pessoa (SMS ou email), fazendo *challenge-response*. As chaves são mais fáceis de gerir, mas há menos independência entre fatores (telefone roubado, por exemplo). 
-
-## Sessões Web
-
