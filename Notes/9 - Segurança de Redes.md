@@ -25,6 +25,17 @@ A estrutura em camadas da rede permite vários tipos de ataques. Tanto a nível 
 
 Quando à escuta de um canal de comunicações. No wiretappinig ativo, o atacante além de escutar pode injectar, modificar pacotes ou fazer DoS. É usado em muitos países por serviços de segurança.
 
-###
+### Eavesdropping/Packet sniffing
 
-### Ataques à camada
+Recolher e armazenar pacotes trocados entre entidades legítimas. Permite observar todas as comunicaçõe não cifradas, extrair passwords por exemplo. 
+
+### MAC flooding: melhor sniffing
+
+Injeção de imensas mensagens com novos MACs, de modo a que a tabela dos switches fique cheia e eles sejam obrigados a fazer broadcast.
+
+### MAC spoofing: usurpar MAC address
+
+Sempre que sabemos um endereço MAC de uma máquina, podemos usurpá-lo: configurar uma placa de rede para que se pareça com a máquina alvo. Como não há qualquer autenticação na camada lógica, a placa de rede passa a poder receber e enviar pacotes em nomes de terceiros.
+
+### Ataques à camada de rede (IP)
+
