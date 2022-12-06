@@ -39,3 +39,17 @@ Sempre que sabemos um endereço MAC de uma máquina, podemos usurpá-lo: configu
 
 ### Ataques à camada de rede (IP)
 
+#### ARP poisoning/spoofing: usurpar IP
+
+Como os dispositivos fazem cache às respostas do protocolo ARP, acabam por poder ser influenciadas caso um IP seja manipulado. Isto permite fazer ataques Man in the Middle. 
+
+#### Hijacking de routing
+
+O protocolo ICMP permite descobrir um router na rede. Se o atacante se auto-afirmar como router, pode redirecionar o tráfego e inspecionar o conteúdo dos pacotes não cifrados. 
+
+#### Rogue DHCP
+
+O protocolo DHCP permite dar IPs a clientes que o pedem ao servidor. Este ataque consiste em convencer o cliente que o router que deseja está num determinado IP, este por sua vez controlado pelo adversário. É mais um típico ataque Man in the Middle.
+
+#### DNS spoofing
+
