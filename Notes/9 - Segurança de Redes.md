@@ -19,7 +19,12 @@ Para traduzir o nome do site para um IP é necessário usar um DNS (*Domain Name
 
 A estrutura em camadas da rede permite vários tipos de ataques. Tanto a nível físico, como em *endpoints* e infraestruturas. É por isso importante seguir o modelo CIA (confidencialidade, integridade e disponibilidade).
 
-### Ataques à camada lógica
+### Ataques à camada física/lógica
 
+#### Wiretappinig
+
+Quando à escuta de um canal de comunicações. No wiretappinig ativo, o atacante além de escutar pode injectar, modificar pacotes ou fazer DoS. É usado em muitos países por serviços de segurança.
+
+###
 
 ### Ataques à camada
