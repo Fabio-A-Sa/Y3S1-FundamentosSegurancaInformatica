@@ -63,11 +63,11 @@ Bombardear o servidor DNS local com respostas de resoluções DNS, assim o servi
 
 #### Terminação de ligações
 
-Uma firewall pode terminar ligações, enviando mensagens de *reset* para ambas as partes terminais.
+Uma firewall pode terminar ligações, enviando mensagens de *reset* para ambas as partes terminais. Usada na *Great Firewall* da China, por exemplo.
 
 #### Spoofing às cegas (off path)
 
-Estabelecimento de uma sessão em nome de uma origem não controlada. Envia-se uma mensagem inicial e adivinhamos o número de sequência. 
+Estabelecimento de uma sessão em nome de uma origem não controlada. Envia-se uma mensagem inicial (SYN) e adivinhamos o número de sequência para poder continuar a comunicar. Uma mitigação possível é usar números de sequência aleatórios.
 
 #### TCP Session Hijacking
 
@@ -75,4 +75,21 @@ Após a vítima criar uma sessão legítima (onde são passados segredos que o a
 
 #### UDP Hijacking
 
-Como não há controlo de tráfego, 
+Como não há controlo de tráfego, o atacante pode interferir na transferência de pacotes e tenta responder primeiro que os *endpoints*.
+
+## Defesas
+
+As seguranças da rede são colocadas após a implementação dos protocolos, que muitas vezes não são cifrados.
+
+Define-se uma fronteira entre a organização a proteger e a internet externa. Isto permite proteger a rede interna de ataques externos e de ataques internos por máquinas infetadas. Limita-se o tráfego da rede através de mecanismos:
+- Firewalls
+- NATs
+- Proxies de aplicações especificas
+- Network Intrusion Detection Systems
+
+### Firewalls
+
+Existem firewalls locais (nas máquinas do sistema) e firewalls da rede (que interceptam comunicações de/para muitas máquinas e definem a fronteira com o exterior). Filtram os pacotes olhando para os cabeçalhos, percebendo quais são os endereços IP e os protocolos alocados. São diferentes das **proxies**, já que estas últimas só trabalham ao nível de uma aplicação específica.
+
+### Políticas de Controlo de Acessos
+
