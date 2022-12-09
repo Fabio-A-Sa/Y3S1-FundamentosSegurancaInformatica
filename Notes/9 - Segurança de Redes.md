@@ -93,3 +93,21 @@ Existem firewalls locais (nas máquinas do sistema) e firewalls da rede (que int
 
 ### Políticas de Controlo de Acessos
 
+As firewalls permitem todos os acessos de dentro para fora mas não de fora para dentro. Para esse caso usa uma *white list* e nega todos os outros acessos a serviços (**default deny**), uma política mais conservadora, provocando sempre alguma instabilidade inicial.
+
+### Filtragem de pacotes
+
+Algumas regras são usadas para receber ou não determinados pacotes:
+- Bloquear DNS para servidores não conhecidos;
+- Bloquear HTTPS de ligações para IPs fora da organização;
+- Bloquear endereços internos desconhecidos;
+
+A filtragem pode ser sem estado ou com estado, quando há registo de um contexto e o pacote terá de pertencer ao contexto, caso contrário é negado. A filtragem pode ser contornada usando portas usadas por serviços legítimos ou encapsular protocolos dentro de outros protocolos legítimos. 
+
+### Network Address Translation
+
+Esta tabela pode ser usurpada para permitir ligações externas a determinados máquinas da rede interna. A tabela NAT permite reduzir exposições ao exterior, não dando diretamente os IPs das máquinas internas da rede, mas por outro lado é fácil fazer *bypass* para adversários ativos. 
+
+### Proxies
+
+Obriga o tráfego de uma ou mais aplicações a passar poe ela, garantindo um controlo de pacotes para averiguar se há algum perigo. É um Man in the Middle "do bem". Usado em servidores STMP, SSH e HTTPS.
