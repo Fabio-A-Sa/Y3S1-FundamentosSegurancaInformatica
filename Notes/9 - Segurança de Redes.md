@@ -59,3 +59,20 @@ Fornecimento de IPs falsos para nomes de sites fidedignos.
 
 Bombardear o servidor DNS local com respostas de resoluções DNS, assim o servidor acaba por aceitar respostas que contém um IP controlado pelo atacante, dando depois a entidades legítimas esse IP usurpado.
 
+### Ataques à camada de Transporte
+
+#### Terminação de ligações
+
+Uma firewall pode terminar ligações, enviando mensagens de *reset* para ambas as partes terminais.
+
+#### Spoofing às cegas (off path)
+
+Estabelecimento de uma sessão em nome de uma origem não controlada. Envia-se uma mensagem inicial e adivinhamos o número de sequência. 
+
+#### TCP Session Hijacking
+
+Após a vítima criar uma sessão legítima (onde são passados segredos que o atacante inicialmente não sabe), usurpar essa ligação. Há três fases: tracking, des-sincronização (avançar no número de sequência, receber NACKS ou perda de pacotes) e injeção. Não há maneira de contornar a situação a menos de criptografia. 
+
+#### UDP Hijacking
+
+Como não há controlo de tráfego, 
