@@ -111,3 +111,4 @@ Esta tabela pode ser usurpada para permitir ligações externas a determinados m
 ### Proxies
 
 Obriga o tráfego de uma ou mais aplicações a passar poe ela, garantindo um controlo de pacotes para averiguar se há algum perigo. É um Man in the Middle "do bem". Usado em servidores STMP, SSH e HTTPS.
+
