@@ -1,4 +1,4 @@
-# Preparação para o Teste
+# Preparação para o Exame
 
 ## Tópicos
 
