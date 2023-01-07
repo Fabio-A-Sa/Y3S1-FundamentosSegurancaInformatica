@@ -39,8 +39,7 @@
 
 ### 1.2 - Atores e Atacantes
 
-Os atores são as entidades que intervêm no sistema (pessoas, organizações, empresas, máquinas), os atacantes/adversários são  
-
+Os atores são as entidades que intervêm no sistema (pessoas, organizações, empresas, máquinas), os atacantes/adversários são os que tentam atacar os recursos anteriormente descritos.<br>
 A segurança define-se sob o ponto de vista dos atores. Pode-se depositar confiança em alguns atores/componentes.
 
 ### 1.3 - Modelos de segurança
@@ -72,10 +71,10 @@ A matriz da análise dos riscos tem dois eixos: probabilidade de ameaça com imp
 ### 2.1 - Overflow na Stack
 
 Funções como `strcpy` podem copiar mais do que o buffer estático alocado, podendo reescrever endereços e injectar shellcode. A stack é constituída começa nos endereços mais elevados e cresce no sentido da heap, para endereços mais baixos. A ordem da alocação é sempre a mesma:
-- frame pointer (ebp) da função que chamou;
+- frame pointer (ebp) da função que chamou a atual;
 - alocação de espaço para as variáveis locais;
-- alocação de espaço para os argumentos da funço que vai chamar;
-- endereço de retorno;
+- alocação de espaço para os argumentos da função que vai chamar;
+- endereço de retorno, para quando sair da função que vai chamar conseguir voltar para o mesmo ponto de execução;
 - stack pointer (esp);
 
 ### 2.2 - Overflow na Heap
