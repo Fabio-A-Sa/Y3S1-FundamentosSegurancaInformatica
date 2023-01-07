@@ -79,7 +79,7 @@ Funções como `strcpy` podem copiar mais do que o buffer estático alocado, pod
 
 ### 2.2 - Overflow na Heap
 
-Semelhante ao da heap, mas com exploit mais complicado pois a heap é dinâmicamente gerida e não há tanta facilidade de prever endereços. Tenta-se manipular os endereços contidos na heap, como apontadores para funções (vTables), linking dinâmico com bibliotecas, tratamento de excepções. <br>A escrita é feita através de mallocs, que escrevem e reescrevem endereços para blocos de memória. Ao exceder os limites destes blocos, podemos tentar escrever novos endereços que apontem para código malicioso.
+Semelhante ao da heap, mas com exploit mais complicado pois a heap é dinâmicamente gerida e não há tanta facilidade de prever endereços. Tenta-se manipular os endereços contidos na heap, como apontadores para funções (vTables), linking dinâmico com bibliotecas, tratamento de excepções. <br> A escrita é feita através de mallocs, que escrevem e reescrevem endereços para blocos de memória. Ao exceder os limites destes blocos, podemos tentar escrever novos endereços que apontem para código malicioso.
 - `Heap spraying`, quando se enche ao máximo a heap de código malicioso com NOPs para aumentar a chance de controlo;
 - `Use after free`, nada garante que apontadores já free() não apontem para zonas de memória entretanto manipuladas;
 
@@ -87,7 +87,7 @@ Semelhante ao da heap, mas com exploit mais complicado pois a heap é dinâmicam
 
 O processo de truncatura ou multiplicação pode diminuir ou até trocar o sinal do valor inicialmente colocado. Esta técnica serve para alocar um buffer demasiado pequeno (ocorre overflow) ou crash ao servidor (ocorre DoS).
 
-### 2.4 - Strins de formatação
+### 2.4 - Strings de formatação
 
 Funções como `printf` recorrem a parâmetros e a percentagens para ir buscar à stack os valores a mostrar. Se tiver mais percentagens que parâmetros, irá ler outros endereços crescentes da stack. O descritor `%n` acaba por escrever no endereço o número de bytes escritos para o stdout até ali.
 
@@ -184,7 +184,7 @@ Modelo de segurança que só deixa frames comunicarem entre si se tiverem a mesm
 A resposta de qualquer origem é processada, criação de frame e javascript dessa origem, mas não pode haver manipulação dessa informação por parte de outro script.
 
 **Para cookies:**<br>
-A definição de origem é diferente: é apenas o domínio e path. Aqui as cookies são enviadas quando o seu domínio for um sufixo do domínio da URL e se a sua path for um prefixo da path do URL. Para os novos sites, se SameSite=None, então enviam as cookies de qualquer forma.
+A definição de origem é diferente: é apenas o domínio e path. Aqui as cookies são enviadas quando o seu domínio for um sufixo do domínio da URL e se a sua path for um prefixo da path do URL. Para os novos sites, se SameSite=None, então enviam as cookies de qualquer forma. De forma simplificada, o Path da cookie deve estar contido do URL que o pede, podendo até ser iguais.
 
 ### 4.3 - Cross-Origin Resource Sharing (CORS)
 
