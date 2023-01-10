@@ -69,3 +69,6 @@ Gera-se aleatoriamente no momento um componente (timestamp ou outro) de tempo de
 
 ### 3.1 - Autenticação Multifactor
 
+- `Smartcards`, não têm interface com o utilizador mas tem um microprocessador capaz de garantir defesa em profundidade;
+- `One-Time Token`, tem um segredo pré-partilhado com o servidor, e pede a password e o MAC gerado na altura. Pode existir ataque man-in-the middle e a phishing e o servidor tem de guardar chaves secretas;
+- `One-Time Passcode`, envia tokens para o telemóvel, custa menos um dispositivo mas há menos independência entre factores;
