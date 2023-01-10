@@ -48,4 +48,12 @@ Comprometer chaves de longa duração não compromete chaves de sessões passada
 
 ## 2 - Public Key Infrastructure
 
-Necessária para provar a autenticidade do par de chaves públicas e privadas. Usar um TTP (*Trusted-Third-Party*) está fora de questão pois é impossível haver TTP para todos ou ambos terem ligações à mesma TTP. Usa-se então um CA (*Certificate Authority*), que emite certificados que garantem a autenticidade das chaves públicas e privadas de determinadas entidades. Estes certificados podem depois ser enviados em canais abertos. Como validar um certificado? Através da chave pública da própria CA, que é conhecida 
+Necessária para provar a autenticidade do par de chaves públicas e privadas. Usar um TTP (*Trusted-Third-Party*) está fora de questão pois é impossível haver TTP para todos ou ambos terem ligações à mesma TTP. Usa-se então um CA (*Certificate Authority*), que emite certificados que garantem a autenticidade das chaves públicas e privadas de determinadas entidades. 
+
+Estes certificados podem depois ser enviados em canais abertos. Como validar um certificado? Através da chave pública da própria CA, que é conhecida através de conhecimento anterior de CA ou na cadeia de certificados que já vêm nos sistemas operativos (têm de vir de canais seguros sempre). Nada é mais confiável do que o root CA, pois é a que gera as chaves de Certificados mais próximos dos utilizadores finais.
+
+A revogação de certificados pode ser feita através de *certificate revokation list*. Existem dois protocolos:
+- TSL: Trusted Service Provider Lists, para comunidades pequenas;
+- OCSP: Online Certificate Status Protocol, por motivos organizacionais;
+- Certificate Pinning: Empresas contém as suas próprias white lists que são atualizados periodicamente;
+
