@@ -48,3 +48,4 @@ Comprometer chaves de longa duração não compromete chaves de sessões passada
 
 ## 2 - Public Key Infrastructure
 
+Necessária para provar a autenticidade do par de chaves públicas e privadas. Usar um TTP (*Trusted-Third-Party*) está fora de questão pois é impossível haver TTP para todos ou ambos terem ligações à mesma TTP. Usa-se então um CA (*Certificate Authority*), que emite certificados que garantem a autenticidade das chaves públicas e privadas de determinadas entidades. Estes certificados podem depois ser enviados em canais abertos. Como validar um certificado? Através da chave pública da própria CA, que é conhecida 
