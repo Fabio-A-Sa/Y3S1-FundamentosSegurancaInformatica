@@ -7,6 +7,8 @@
     - 1.2 Autenticidade
     - 1.3 Aleatoriedade
     - 1.4 Cifras assimétricas
+    - 1.5 Assinaturas digitais
+    - 1.6 Acordos de chaves
 2. PKI
 3. Autenticação
 4. Segurança de Redes
@@ -36,4 +38,8 @@ Usando fontes de entropia, o computador permite aleatoriedade em /dev/urandom e 
 Usadas porque não é possível garantir o não-repúdio nem gerir chaves simétricas de longa duração em ambientes síncronos (onde é usada acordos de chave e assinaturas digitais) e assíncronos (onde são usadas estas chaves). Devido à complexidade computacional chaves de milhares de bits são usadas para cifrar uma chave de 128 bits que cifra, de forma simétrica, o payload a transmitir. Pode haver vários transmissores mas só um receptor (o que tem a chave privada), usando um *trapdoor permutation* como o RSA. A garantia que a chave pública pertence àquela entidade é dada por PKI.
 
 ### 1.5 - Assinaturas digitais
+
+Não são repudiáveis (intrínsecas a uma só pessoa), ao contrário dos MACs. A ideia é assinar o documento original e só depois cifrar, para não poder alegar que desconhecia o conteúdo do envelope digital. Os envelopes digitais têm de ter um destinatário.
+
+### 1.6 - Acordos de chaves
 
