@@ -3,6 +3,9 @@
 ## Tópicos
 
 1. Criptografia
+    - 1.1 Cifras simétricas
+    - 1.2 Autenticidade
+    - 1.3 Cifras assimétricas
 2. PKI
 3. Autenticação
 4. Segurança de Redes
@@ -21,4 +24,7 @@ Por um lado garantem confidencialidade e é formalmente segura. Mas por outro la
 
 ### 1.2 - Autenticidade
 
-Garantida por MAC, que é um selo que é enviado juntamente com a mensagem codificada assim como o número de sequência para garantir não duplicações ou faltas de partes da mensagem integral. Permite identificar se houve manipulação da mensagem pelo caminho. 
+Garantida por MAC, que é um selo de 256 bits enviado juntamente com a mensagem codificada assim como o número de sequência para garantir não duplicações ou faltas de partes da mensagem integral. Permite identificar se houve manipulação da mensagem pelo caminho. 
+
+### 1.3 - Cifras assimétricas
+
