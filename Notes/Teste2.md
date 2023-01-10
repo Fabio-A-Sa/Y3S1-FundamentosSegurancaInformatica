@@ -10,7 +10,10 @@
     - 1.5 Assinaturas digitais
     - 1.6 Acordos de chaves
 2. PKI
+    - 2.1 Certificados e CA
+    - 2.2 Revogação de Certificados
 3. Autenticação
+    - 3.1 Autenticação Multifactor
 4. Segurança de Redes
 5. Malware e Deteção
 6. TLS
@@ -49,7 +52,11 @@ Comprometer chaves de longa duração não compromete chaves de sessões passada
 
 Necessária para provar a autenticidade do par de chaves públicas e privadas. Usar um TTP (*Trusted-Third-Party*) está fora de questão pois é impossível haver TTP para todos ou ambos terem ligações à mesma TTP. Usa-se então um CA (*Certificate Authority*), que emite certificados que garantem a autenticidade das chaves públicas e privadas de determinadas entidades. 
 
+### 2.1 - Certificados e CA
+
 Estes certificados podem depois ser enviados em canais abertos. Como validar um certificado? Através da chave pública da própria CA, que é conhecida através de conhecimento anterior de CA ou na cadeia de certificados que já vêm nos sistemas operativos (têm de vir de canais seguros sempre). Nada é mais confiável do que o root CA, pois é a que gera as chaves de Certificados mais próximos dos utilizadores finais.
+
+### 2.2 - Revogação de Certificados
 
 A revogação de certificados pode ser feita através de *certificate revokation list*. Existem dois protocolos:
 - TSL: Trusted Service Provider Lists, para comunidades pequenas;
@@ -58,6 +65,7 @@ A revogação de certificados pode ser feita através de *certificate revokation
 
 ## 3 - Autenticação
 
-Gera-se aleatoriamente no momento um componente (timestamp ou outro) de tempo de vida muito curto e envia-se à entidade que se quer autenticar. A entidade terá de cifrar o componente e enviar, provando que está ativo naquele momento. As provas de identidade podem ser com passwords, algo que se possui (telemóveis e smartcards), ou por biometria.
+Gera-se aleatoriamente no momento um componente (timestamp ou outro) de tempo de vida muito curto e envia-se à entidade que se quer autenticar. A entidade terá de cifrar o componente e enviar, provando que está ativo naquele momento. As provas de identidade podem ser com passwords, algo que se possui (telemóveis e smartcards), ou por biometria. O armazenamento das passwords deverá ser feito criptograficamente com *salt*, que não é secreto, e cifras lentas, para inibir ataques de dicionário. 
 
-O armazenamento das passwords deverá ser feito criptograficamente com *salt*, que não é secreto, e cifras lentas, para inibir ataques de dicionário. 
+### 3.1 - Autenticação Multifactor
+
