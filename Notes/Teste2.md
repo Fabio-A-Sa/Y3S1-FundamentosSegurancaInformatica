@@ -10,6 +10,7 @@
     - 1.5 Assinaturas digitais
     - 1.6 Acordos de chaves
 2. PKI
+    - 
 3. Autenticação
 4. Segurança de Redes
 5. Malware e Deteção
@@ -42,4 +43,8 @@ Usadas porque não é possível garantir o não-repúdio nem gerir chaves simét
 Não são repudiáveis (intrínsecas a uma só pessoa), ao contrário dos MACs. A ideia é assinar o documento original e só depois cifrar, para não poder alegar que desconhecia o conteúdo do envelope digital. Os envelopes digitais têm de ter um destinatário.
 
 ### 1.6 - Acordos de chaves
+
+Comprometer chaves de longa duração não compromete chaves de sessões passadas. Usa-se através do protocolo Diffie-Hellman autenticado, que garante proteção contra ataques *Man-in-the Middle*.
+
+## 2 - Public Key Infrastructure
 
