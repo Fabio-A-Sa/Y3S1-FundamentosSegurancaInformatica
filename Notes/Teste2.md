@@ -10,7 +10,6 @@
     - 1.5 Assinaturas digitais
     - 1.6 Acordos de chaves
 2. PKI
-    - 
 3. Autenticação
 4. Segurança de Redes
 5. Malware e Deteção
@@ -56,4 +55,6 @@ A revogação de certificados pode ser feita através de *certificate revokation
 - TSL: Trusted Service Provider Lists, para comunidades pequenas;
 - OCSP: Online Certificate Status Protocol, por motivos organizacionais;
 - Certificate Pinning: Empresas contém as suas próprias white lists que são atualizados periodicamente;
+
+## 3 - Autenticação
 
