@@ -58,3 +58,6 @@ A revogação de certificados pode ser feita através de *certificate revokation
 
 ## 3 - Autenticação
 
+Gera-se aleatoriamente no momento um componente (timestamp ou outro) de tempo de vida muito curto e envia-se à entidade que se quer autenticar. A entidade terá de cifrar o componente e enviar, provando que está ativo naquele momento. As provas de identidade podem ser com passwords, algo que se possui (telemóveis e smartcards), ou por biometria.
+
+O armazenamento das passwords deverá ser feito criptograficamente com *salt*, que não é secreto, e cifras lentas, para inibir ataques de dicionário. 
