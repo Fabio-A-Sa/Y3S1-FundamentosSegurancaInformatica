@@ -16,10 +16,10 @@ This repository contains all the exercises and assessments of the UC Fundamentos
 ### Notes
 Notes that I take during theoretical lectures in Markdown <br>
 
-### Logbooks
+### Logbooks (Grade: 19.6/20)
 Varied exercises of easy, medium and difficult level, about the subject taught in the present week.
 
-### CTFs
+### CTFs (Grade: 19.6/20)
 Capture The Flag challenges about the subject taught in the present week.
 
 **@ Fábio Araújo de Sá** <br>
