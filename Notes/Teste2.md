@@ -82,6 +82,7 @@ Os protocolos de redes não têm qualquer segurança ao nível de usurpação de
 - Wiretappinig, escuta num canal de comunicações;
 - Eavesdropping/Packet sniffing, recolher e armazenar pacotes trocados entre entidades legítimas;
 - MAC flooding: Injeção de imensas mensagens com novos MACs, a tabela dos switches fica cheia e faz broadcast;
-- MAC spoofing: 
+- MAC spoofing: Usurpar MAC address, criar uma máquina com o mesmo MAC para também poder receber os pacotes;
 
 ### 4.2 - Ataques à camada de rede (IP)
+
