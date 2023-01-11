@@ -19,6 +19,8 @@
     - 4.2 - Ataques à camada de rede (IP)
     - 4.3 - Ataques à camada de transporte
 5. Malware e Deteção
+    - 5.1 - HIDS - IDS no Host
+    - 5.2 - NIDS - IDS na Network
 6. TLS
 
 ## 1 - Criptografia
@@ -105,4 +107,16 @@ Os protocolos de redes não têm qualquer segurança ao nível de usurpação de
 As `Firewalls` funcionam como uma barreira que filtra os cabeçalhos dos pacotes que passam para a rede interna, usando uma política de controlo de acessos. A filtragem pode ser sem estado ou com estado, sendo o último com melhor performence pois regista o contexto e analisa o pacote naquele contexto, é mais permissiva.
 
 ## 5 - Malware e Detecção
+
+Por exemplo com BotNets, rede de computadores com um sistema de controlo e comando comum que é capaz de enviar comandos pela rede. 
+
+### 5.1 - HIDS - IDS no Host
+
+É muito mais preciso na sua análise pois tem acesso direto à atividade maliciosa. Protegem os sistemas dos malwares que não são transportados na rede e permite observar os dados que são cifrados durante o transporte na rede. Configura-se de forma singular para cada ponta, algo impossível em sistemas MIDS.
+
+### 5.2 - NIDS - IDS na Network
+
+Permite proteger muitos outros sistemas, é mais simples de gerir e instalar e não ocupa espaço nesses sistemas. É de mais difícil acesso para os atacantes.
+
+## 6 - TLS - Transport Security Layer
 
