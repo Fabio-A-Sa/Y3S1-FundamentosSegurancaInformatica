@@ -118,5 +118,6 @@ Por exemplo com BotNets, rede de computadores com um sistema de controlo e coman
 
 Permite proteger muitos outros sistemas, é mais simples de gerir e instalar e não ocupa espaço nesses sistemas. É de mais difícil acesso para os atacantes.
 
-## 6 - TLS - Transport Security Layer
+## 6 - TLS - Transport Layer Security
 
+Upgrade do TCP através de Security Sockets. Há uma primeira fase que se estabelece à partida com criptografia de chave pública. As chaves de longa duração são usadas para as assinaturas e não para o transporte de chaves, logo uma chave de longa duração não conpromete acordos de chave anteriores. Utiliza PKI para estabelecer a autenticação com o servidor, através do nome do domínio e não pelo IP como anteriormente era feito.
