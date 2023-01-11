@@ -99,5 +99,7 @@ Os protocolos de redes não têm qualquer segurança ao nível de usurpação de
 
 - `Terminação de Ligações`: através da firewall pode haver término de ligações; 
 - `Spoofing às cegas, off path`:  estabelecer uma sessão em nome de uma origem que não controlamos, baseado em adivinhar os números de sequências;
-- `TCP Session Hijacking`:
-- `UDP Hijacking`: 
+- `TCP Session Hijacking`: depois da autenticação da sessão, aproveitamos o estado da sessão;
+- `UDP Hijacking`: não há controlo de tráfego, logo pode-se interferir na transferência de pacotes e tenta responder primeiro aos endpoints;
+
+As `Firewalls` funcionam como uma barreira que filtra os cabeçalhos dos pacotes que passam para a rede interna, usando uma política de controlo de acessos. A filtragem pode ser sem estado ou com estado, sendo o último com melhor performence pois regista o contexto e analisa o pacote naquele contexto, é mais permissiva.
