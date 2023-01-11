@@ -72,3 +72,16 @@ Gera-se aleatoriamente no momento um componente (timestamp ou outro) de tempo de
 - `Smartcards`, não têm interface com o utilizador mas tem um microprocessador capaz de garantir defesa em profundidade;
 - `One-Time Token`, tem um segredo pré-partilhado com o servidor, e pede a password e o MAC gerado na altura. Pode existir ataque man-in-the middle e a phishing e o servidor tem de guardar chaves secretas;
 - `One-Time Passcode`, envia tokens para o telemóvel, custa menos um dispositivo mas há menos independência entre factores;
+
+## 4 - Segurança de Redes
+
+Os protocolos de redes não têm qualquer segurança ao nível de usurpação de pacotes. Podem haver diversos tipos de ataques (eavesdropper, off path, in path e man-in-the-middle):
+
+### 4.1 - Ataques à camada física e lógica
+
+- Wiretappinig, escuta num canal de comunicações;
+- Eavesdropping/Packet sniffing, recolher e armazenar pacotes trocados entre entidades legítimas;
+- MAC flooding: Injeção de imensas mensagens com novos MACs, a tabela dos switches fica cheia e faz broadcast;
+- MAC spoofing: 
+
+### 4.2 - Ataques à camada de rede (IP)
