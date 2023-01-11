@@ -79,10 +79,18 @@ Os protocolos de redes não têm qualquer segurança ao nível de usurpação de
 
 ### 4.1 - Ataques à camada física e lógica
 
-- Wiretappinig, escuta num canal de comunicações;
-- Eavesdropping/Packet sniffing, recolher e armazenar pacotes trocados entre entidades legítimas;
-- MAC flooding: Injeção de imensas mensagens com novos MACs, a tabela dos switches fica cheia e faz broadcast;
-- MAC spoofing: Usurpar MAC address, criar uma máquina com o mesmo MAC para também poder receber os pacotes;
+- `Wiretappinig`: escuta num canal de comunicações;
+- `Eavesdropping/Packet sniffing`: recolher e armazenar pacotes trocados entre entidades legítimas;
+- `MAC flooding`: Injeção de imensas mensagens com novos MACs, a tabela dos switches fica cheia e faz broadcast;
+- `MAC spoofing`: Usurpar MAC address, criar uma máquina com o mesmo MAC para também poder receber os pacotes;
 
 ### 4.2 - Ataques à camada de rede (IP)
+
+- `ARP poisoning/spoofing`: convence a outra máquina que eu tenho aquele IP, permite Man-in-the-middle;
+- `Hijacking de routing`: convencer a rede que somos um router;
+- `Rogue DHCP`: o protocolo DHCP dá IPs a clientes que o pedem ao servidor. Usurpar o funcionamento disto é o mais típico ataque;
+- `DNS spoofing`: máquina maliciosa a fazer de servidor DNS;
+- `DNS (cache) poisoning / Kaminsky Attack`: sem usurpar o DNS, bombardear o DNS legítimo com informação falsa;
+
+### 4.3 - Ataques à camada de transporte
 
