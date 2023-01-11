@@ -103,3 +103,6 @@ Os protocolos de redes não têm qualquer segurança ao nível de usurpação de
 - `UDP Hijacking`: não há controlo de tráfego, logo pode-se interferir na transferência de pacotes e tenta responder primeiro aos endpoints;
 
 As `Firewalls` funcionam como uma barreira que filtra os cabeçalhos dos pacotes que passam para a rede interna, usando uma política de controlo de acessos. A filtragem pode ser sem estado ou com estado, sendo o último com melhor performence pois regista o contexto e analisa o pacote naquele contexto, é mais permissiva.
+
+## 5 - Malware e Detecção
+
