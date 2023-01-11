@@ -2,7 +2,7 @@
 
 Inicialmente exploramos o ficheiro disponibilizado na plataforma CTF que é o mesmo que está a ser executado no servidor na porta 4007. Com o comando **checksec** verificamos que `program` não tem o binário randomizado mas existem proteções do endereço de retorno usando canários:
 
-![Checksec](../img/finalformat1.png)
+![Checksec](../Images/finalformat1.png)
 
 Como só tínhamos acesso ao binário, utilizamos os comandos seguintes para exibir os *exported symbols* e fazer o *disassembly*:
 
@@ -13,19 +13,19 @@ $ objdump -D -S program # show disassembly
 
 Isto permitiu ver também o nome das funções implementadas no ficheiro. Destacaram-se de imediato a função `main` e a função `old_backdoor`:
 
-![Old_backdoor](../img/finalformat2.png)
+![Old_backdoor](../Images/finalformat2.png)
 
 A dica disponibilizada, "Removemos a nossa special feature, já não há flags para ninguém", indica que este CTF tem conexão com o CTF 2 da semana 7. Nesse existia uma backdoor que podia aberta manipulando o valor de uma variável, a "special feature", e com isso ganhar acesso à shell do servidor. Aqui essa chave já não existe mas há uma chamada ao sistema do género no funcionamento interno da função:
 
-![Funcionamento de old_backdoor](../img/finalformat3.png)
+![Funcionamento de old_backdoor](../Images/finalformat3.png)
 
 Como a flag (flag.txt) está no *workdirectory* é de interesse que a main chame esta *backdoor*. Notamos que main invoca `flush()` antes e depois de `scanf()`. Scanf quando incorretamente utilizado permite a cópia de indefinidos bytes do stdin para o buffer local. Com um ataque do género **format string** podemos usurpar a segunda chamada de `flush()` através do input.
 
-![Funcionamento de main](../img/finalformat4.png)
+![Funcionamento de main](../Images/finalformat4.png)
 
 O endereço de old_backdoor é constante (0x08049236) pois não há randomização de endereços. Por outro lado, fflush é uma função da CLIB e por isso há *linking* dinâmico com o programa. Uma tabela GOT (*Global Offset Table*), disponível usando o comando `objdump -R` e cujo o funcionamento foi estudado por [aqui](https://maskray.me/blog/2021-08-29-all-about-global-offset-table) guarda os endereços de todas as funções usadas. A de fflush é 0x0804c010:
 
-![Global Offset Table](../img/finalformat5.png)
+![Global Offset Table](../Images/finalformat5.png)
 
 O objetivo do ataque é agora escrever o valor 0x08049236 na zona de memória apontada pela GOT na entrada da fflush 0x0804c010. Assim, a função main ao invocar pela segunda vez fflush() irá chamar old_backdoor() em vez da tradicional função da CLIB.
 
@@ -74,4 +74,4 @@ ctf_server.sendline(b'FFFF\x12\xc0\x04\x08FFFF\x10\xc0\x04\x08%.2036x%hn%.35378x
 
 Tal como esperado, ao executar o script conseguimos que main invocasse old_backdoor e assim abrir uma shell no servidor para espreitar o conteúdo do ficheiro `flag.txt`:
 
-![Flag](../img/finalformat6.png)
+![Flag](../Images/finalformat6.png)

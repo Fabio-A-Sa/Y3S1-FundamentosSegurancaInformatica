@@ -19,13 +19,13 @@ SELECT username FROM user WHERE username = 'admin'-- AND password = $password
 
 Tal como esperado, conseguimos fazer login com a conta do administrador e assim ter acesso ao conteúdo do ficheiro `flag.txt` e à flag do desafio, `flag{ac3aa6c08d2bd43bc74361ad039139fd}`.
 
-![CTF 4 1](../img/ctf4task1.png)
+![CTF 4 1](../Images/ctf4task1.png)
 
 ## Segunda parte
 
 Com o comando **checksec** verificamos que `program` (main.c compilado) não tem o binário randomizado nem existem proteções do endereço de retorno usando canários. 
 
-![CTF 4 2 a](../img/ctf4task2a.png)
+![CTF 4 2 a](../Images/ctf4task2a.png)
 
 Também tivemos acesso ao código fonte que está a ser executados no servidor na porta 4001:
 
@@ -85,6 +85,6 @@ Isto irá reescrever o endereço de retorno da função main, que apontará agor
 
 Tal como esperado, ao executar o código (disponível [aqui](../CTF/Exploits/Semana08.py)), conseguimos abrir uma bash no servidor:
 
-![CTF 4 2 b](../img/ctf4task2b.png)
+![CTF 4 2 b](../Images/ctf4task2b.png)
 
 Conseguimos assim ter acesso ao conteúdo do ficheiro `flag.txt` e à flag do desafio, `flag{a4421b76e3dfc304875754a99497e1f1}`.

@@ -78,4 +78,4 @@
 > ```
 > Executou-se o programa e este gerou o ficheiro `badfile`. <br><br>
 > Finalmente, executou-se o programa vulnerável que provocou o buffer overflow e lançou uma shell com permissões root, tal como previsto. <br> <br>
-> ![Buffer Overflow](../img/lab5task3.png)
+> ![Buffer Overflow](../Images/lab5task3.png)

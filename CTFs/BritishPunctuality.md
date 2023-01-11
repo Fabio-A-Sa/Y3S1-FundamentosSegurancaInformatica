@@ -2,7 +2,7 @@
 
 Verificamos que não temos permissão para abrir diretamente o ficheiro `flags/flag.txt`, mas o utilizador "flag_reader" tem:
 
-![CTF Opcional 1 a](../img/ctfopcional1a.png)
+![CTF Opcional 1 a](../Images/ctfopcional1a.png)
 
 Verificou-se também que `/tmp` é o único diretório onde o nosso utilizador tem permissões de escrita.
 Neste diretório existe um ficheiro `last_log.txt` que é atualizado todos os minutos, com permissões de flag_reader, através do **cronscript** (/etc/cron.d/mycronscript) seguinte:
@@ -87,4 +87,4 @@ $ cp /bin/cat /tmp/myenv
 
 Finalmente, esperamos uma nova execução de `my_script.sh` através do **cronscript** e verificou-se que o `last_log` continha a flag tal como previsto:
 
-![CTF Opcional 1 b](../img/ctfopcional1b.png)
+![CTF Opcional 1 b](../Images/ctfopcional1b.png)

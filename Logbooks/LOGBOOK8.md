@@ -27,7 +27,7 @@ SELECT * FROM credentials WHERE Name = "Alice";
 
 Obtivemos assim todos os dados pessoais do utilizador:
 
-![Task 1](../img/lab8task1.png)
+![Task 1](../Images/lab8task1.png)
 
 ###  Task 2: SQL Injection Attack on SELECT Statement
 
@@ -50,7 +50,7 @@ WHERE name='admin'# and Password=’$hashed_pwd’
 
 Tal como esperado, conseguimos fazer login com a conta do administrador e assim obter todos os dados relativos ao resto dos utilizadores da aplicação:
 
-![Task 2 a](../img/lab8task2a.png)
+![Task 2 a](../Images/lab8task2a.png)
 
 #### Task 2.2 - Login in adminstrator mode from command line
 
@@ -68,7 +68,7 @@ curl "http://www.seed-server.com/unsafe_home.php?username=admin%27%23&Password="
 
 Obtivemos com isto o código HTML de toda a página que continha os dados pessoais dos utilizadores
 
-![Task 2 b](../img/lab8task2b.png)
+![Task 2 b](../Images/lab8task2b.png)
 
 #### Task 2.3 - Append a new SQL statement
 
@@ -80,7 +80,7 @@ admin'; DROP TABLE IF EXISTS credentials; #
 
 No entanto a operação não chegou a ser executada devido a um erro na base de dados:
 
-![Task 2 c](../img/lab8task2c.png)
+![Task 2 c](../Images/lab8task2c.png)
 
 Segundo [esta fonte](https://www.php.net/manual/en/mysqli.quickstart.multiple-statement.php), a extensão de MySQL utilizada pelo PHP do servidor tem uma proteção que impede a execução de múltiplas queries, pelo que não foi possível concluir o ataque.
 
@@ -108,7 +108,7 @@ PhoneNumber='933667378',Salary='9999999' WHERE ID=$id;
 
 Tal como previsto, a variável salário foi também alterada para o valor escolhido:
 
-![Task 3 a](../img/lab8task3a.png)
+![Task 3 a](../Images/lab8task3a.png)
 
 #### Task 3.2 - Modify other people’ salary
 
@@ -131,7 +131,7 @@ PhoneNumber='933667378',Salary='-9999999' WHERE Name='Boby'# WHERE ID=$id;
 
 Aqui podemos ver o valor do salário do Boby antes e depois do ataque:
 
-![Task 3 b](../img/lab8task3b.png)
+![Task 3 b](../Images/lab8task3b.png)
 
 #### Task 3.3 - Modify other people’ password
 
@@ -154,4 +154,4 @@ PhoneNumber='933667378', password='73335c221018b95c013ff3f074bd9e8550e8d48e' WHE
 
 Com a nova palavra passe alterada, conseguimos entrar na conta do Boby:
 
-![Task 3 c](../img/lab8task3c.png)
+![Task 3 c](../Images/lab8task3c.png)

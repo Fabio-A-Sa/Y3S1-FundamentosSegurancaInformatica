@@ -69,6 +69,6 @@ for attemp in range(0, 2**16):
 
 O script gerado até então irá calcular e mostrar o resultado de todas as 65536 (2^16) tentativas. Sabemos desde o princípio que as flags são da forma `flag{...}`. Para encontrar o resultado pretendido no meio de milhares de linhas de output bastou usar uma `pipe` e `grep` de Linux:
 
-![Flag](../img/numberstation.png)
+![Flag](../Images/numberstation.png)
 
 Tal como previsto uma das chaves geradas foi capaz de converter a criptografia usada e mostrar a mensagem original. O script com todo o código necessário para completar o CTF está disponível em [NumberStation3](/CTF/Exploits/NumberStation3.py).

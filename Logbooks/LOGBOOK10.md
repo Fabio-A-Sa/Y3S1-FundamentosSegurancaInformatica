@@ -22,7 +22,7 @@ A tarefa consistia em injetar um código javascript num perfil do *Elgg* de form
 
 Ao observarmos o perfil da Alice com outra conta do sistema, foi possível verificar que o ataque foi bem implementado: tal como esperado, a mensagem no popup apareceu:
 
-![Task 1](../img/lab10task1.png)
+![Task 1](../Images/lab10task1.png)
 
 ## Task 2 - Posting a Malicious Message to Display Cookies
 
@@ -34,7 +34,7 @@ Esta tarefa é muito semelhante à anterior, embora o código seja diferente poi
 
 Agora, sempre que visualizamos o perfil da Alice, os nossos cookies aparecem na mensagem de alerta do próprio website:
 
-![Task 2](../img/lab10task2.png)
+![Task 2](../Images/lab10task2.png)
 
 ## Task 3 - Stealing Cookies from the Victim’s Machine
 
@@ -54,7 +54,7 @@ $ nc -lknv 5555
 
 Ao iniciar sessão com outra conta e visitar o perfil da Alice, recebemos através da ligação anteriormente feita as cookies desse utilizador do sistema:
 
-![Task 3](../img/lab10task3.png)
+![Task 3](../Images/lab10task3.png)
 
 ## Task 4 - Becoming the Victim’s Friend
 
@@ -62,7 +62,7 @@ A ideia deste ataque é que, quando a vítima entrar no perfil do atacante, adic
 
 Numa fase inicial, acedeu-se ao perfil do Sammy, fez-se um pedido de amizade e capturou-se o *request* com a ferramenta HTTP Header Live:
 
-![Task 4 a](../img/lab10task4a.png)
+![Task 4 a](../Images/lab10task4a.png)
 
 Verificou-se que o endereço foi o seguinte:
 
@@ -90,6 +90,6 @@ Com base neste URL, construiu-se um script que faz um pedido AJAX sempre que a p
 
 Tal como esperado, sempre que outro utilizador do sistema acede ao perfil do Sammy, o browser envia automaticamente um pedido de amizade:
 
-![Task 4 b](../img/lab10task4b.png)
+![Task 4 b](../Images/lab10task4b.png)
 
 Na imagem pode-se observar que apesar do botão para a amizade não estar clicado, o pedido foi enviado.

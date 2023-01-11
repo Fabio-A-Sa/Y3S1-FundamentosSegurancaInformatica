@@ -79,7 +79,7 @@ int main() {
 
 O output do lado do servidor foi o seguinte:
 
-![Task 2 B](../img/lab6task2b.png)
+![Task 2 B](../Images/lab6task2b.png)
 
 Conclui-se então que a mensagem do endereço é `"A secret message"`.
 
@@ -106,7 +106,7 @@ int main() {
 
 O output do lado do servidor foi o seguinte:
 
-![Task 3 A](../img/lab6task3a.png)
+![Task 3 A](../Images/lab6task3a.png)
 
 ### Task 3.B
 
@@ -126,7 +126,7 @@ int main() {
 
 Originou o seguinte output no servidor:
 
-![Task 3 B 1](../img/lab6task3b1.png)
-![Task 3 B 2](../img/lab6task3b2.png)
+![Task 3 B 1](../Images/lab6task3b1.png)
+![Task 3 B 2](../Images/lab6task3b2.png)
 
 Como observado, o valor de `target` é agora 0x00005000.

@@ -5,7 +5,7 @@
 Inicialmente exploramos o site disponibilizado na plataforma CTF na porta 5002. <br>
 Submetemos uma justificação só para testar o funcionamento do sistema e obtivemos assim o acesso a dois botões desativados, sendo que um deles contêm o texto "Give the flag".
 
-![Aspecto inicial do site](../img/ctf5task1a.png)
+![Aspecto inicial do site](../Images/ctf5task1a.png)
 
 O html de esse botão é o seguinte:
 
@@ -25,7 +25,7 @@ Com a vulnerabilidade XSS forçamos a ativação do botão inserindo o seguinte 
 
 Após o refresh automático da página, a flag é visualizada:
 
-![XSS Attack 1](../img/ctf5task1b.png)
+![XSS Attack 1](../Images/ctf5task1b.png)
 
 ## Segunda parte
 
@@ -38,7 +38,7 @@ Um utilizador sem estar autenticado consegue ter acesso à funcionalidade "Ping 
 
 E funcionou, visto que obtivemos o seguinte resultado:
 
-![Ping](../img/ctf5task2a.png)
+![Ping](../Images/ctf5task2a.png)
 
 Assim, tentamos aceder ao ficheiro da flag com o seguinte input:
 ```note
@@ -47,4 +47,4 @@ Assim, tentamos aceder ao ficheiro da flag com o seguinte input:
 
 E verificamos que resultou:
 
-![XSS Attack 2](../img/ctf5task2b.png)
+![XSS Attack 2](../Images/ctf5task2b.png)

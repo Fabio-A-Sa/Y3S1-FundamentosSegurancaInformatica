@@ -50,11 +50,11 @@ openssl rsa -in ca.key -text -noout
 
 Podemos ver que é um certificado CA uma vez que existe na secção *basic constraints* um atributo *certificate authority* verdadeiro:
 
-![CA Certificate](../img/lab11task1a.png)
+![CA Certificate](../Images/lab11task1a.png)
 
 Este certificado é *self-signed* pois o campo *issuer* e o campo *subject* é o mesmo:
 
-![Self-signed](../img/lab11task1b.png)
+![Self-signed](../Images/lab11task1b.png)
 
 O conteúdo do ficheiro gerado referente à criptografia usada está disponível [aqui](../docs/CA_RSA.txt). Nele conseguimos identificar os elementos seguintes:
 - os dois números primos (campo `prime1` e `prime2`);
@@ -82,8 +82,8 @@ $ openssl ca -config openssl.cnf -policy policy_anything -md sha256 -days 3650 -
 
 Com isto obtivemos dois ficheiros: `server.crt`. O conteúdo desse ficheiro permite confirmar que se trata de um certificado para o servidor supracitado:
 
-![Bank certificate 1](../img/lab11task3a.png)
-![Bank certificate 1](../img/lab11task3b.png)
+![Bank certificate 1](../Images/lab11task3a.png)
+![Bank certificate 1](../Images/lab11task3b.png)
 
 Para vertificar que, comentamos a linha "descomentar copy_extensions = copy" do ficheiro "openssl.cnf" e corremos o seguinte código:
 
@@ -97,7 +97,7 @@ O output permitiu verificar que o certificado abrange todos os nomes colocados n
 - www.bank32A.com
 - www.bank32A.com
 
-![Bank alternative names](../img/lab11task3c.png)
+![Bank alternative names](../Images/lab11task3c.png)
 
 ## Task 4 - Deploying Certificate in an Apache-Based HTTPS Website
 
@@ -123,21 +123,21 @@ Para iniciar o servidor Apache foi necessário primeiro abrir uma shell no conta
 $ service apache2 start
 ```
 
-![Apache start](../img/lab11task4a.png)
+![Apache start](../Images/lab11task4a.png)
 
 Acedemos ao *site* `https://bank32.com`, mas verificamos que a ligação era insegura (não estava encriptada):
 
-![Bank32.com inseguro](../img/lab11task4b.png)
+![Bank32.com inseguro](../Images/lab11task4b.png)
 
 Para tornar a nossa ligação segura, adicionamos o certificado CA que geramos às autoridades no browser, em `about:preferences#privacy` -> Certificates -> View Certificates -> Authorities -> Import, e verificamos que a ligação passou a ser segura: 
 
-![Bank32.com seguro](../img/lab11task4c.png)
+![Bank32.com seguro](../Images/lab11task4c.png)
 
 ## Task 5 - Launching a Man-In-The-Middle Attack
 
 A configuração do servidor foi modificada para agora apresentar o site `www.example.com` com as configurações anteriores. O ficheiro "etc/apache2/sites-available/bank32_apache_ssl.conf" ficou da seguinte forma:
 
-![Configurações](../img/lab11task5a.png)
+![Configurações](../Images/lab11task5a.png)
 
 Modificamos também o DNS da vítima, ligando o *hostname* `www.example.com` ao IP do webserver malicioso:
 
@@ -147,9 +147,9 @@ sudo nano etc/hosts     # colocar '10.9.0.80 www.example.com'
 
 Ao dar rebuild ao servidor e ir ao site `www.example.com` verificamos que o browser alerta para um potencial risco:
 
-![Man in the middle attack 1](../img/lab11task5b.png)
+![Man in the middle attack 1](../Images/lab11task5b.png)
 
-![Man in the middle attack 2](../img/lab11task5c.png)
+![Man in the middle attack 2](../Images/lab11task5c.png)
 
 Isto deve-se à incoerência do certificado usado, porque o nome de dominio não coincide com aquele presente no certificado do servidor. 
 
@@ -164,8 +164,8 @@ $ openssl ca -config openssl.cnf -policy policy_anything -md sha256 -days 3650 -
 
 Depois modificamos o ficheiro de configuração do servidor `etc/apache2/sites-available/bank32_apache_ssl.conf` para utilizar os dois ficheiros originados: **example.csr** e **example.key**:
 
-![Man in the middle attack 3](../img/lab11task6a.png)
+![Man in the middle attack 3](../Images/lab11task6a.png)
 
 Ao dar reiniciar o servidor e ir ao site `www.example.com` verificamos que a ligação já era segura. 
 
-![Man in the middle attack 4](../img/lab11task6b.png)
+![Man in the middle attack 4](../Images/lab11task6b.png)
