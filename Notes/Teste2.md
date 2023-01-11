@@ -15,6 +15,9 @@
 3. Autenticação
     - 3.1 Autenticação Multifactor
 4. Segurança de Redes
+    - 4.1 - Ataques à camada física e lógica
+    - 4.2 - Ataques à camada de rede (IP)
+    - 4.3 - Ataques à camada de transporte
 5. Malware e Deteção
 6. TLS
 
@@ -94,3 +97,7 @@ Os protocolos de redes não têm qualquer segurança ao nível de usurpação de
 
 ### 4.3 - Ataques à camada de transporte
 
+- `Terminação de Ligações`: através da firewall pode haver término de ligações; 
+- `Spoofing às cegas, off path`:  estabelecer uma sessão em nome de uma origem que não controlamos, baseado em adivinhar os números de sequências;
+- `TCP Session Hijacking`:
+- `UDP Hijacking`: 
